@@ -1,24 +1,111 @@
 @import "tailwindcss";
-
-@theme {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
+/* @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+} */
+@font-face {
+  font-family: "HurmeGeometricSans";
+  src: url("/fonts/HurmeGeometricSansFamily/HurmeGeometricSans1-Light.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "HurmeGeometricSans";
+  src: url("/fonts/HurmeGeometricSansFamily/HurmeGeometricSans1-SemiBold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HurmeGeometricSans";
+  src: url("/fonts/HurmeGeometricSansFamily/HurmeGeometricSans1-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HurmeGeometricSans";
+  src: url("/fonts/HurmeGeometricSansFamily/HurmeGeometricSans1-Black.otf")
+    format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AustinCyr";
+  src: url("/fonts/AustinCyr/AustinCyr-Bold.eot");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AustinCyr";
+  src: url("/fonts/AustinCyr/AustinCyr-Medium.woff");
+  font-weight: 600;
+  font-style: normal;
+}
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --fontColor: #252525;
+  --primary: #31b3ba;
+  --secondary: #25868c;
+  --customGray: #6b6b6b;
+  --footer: #090c1d;
+  --font-hurme: "HurmeGeometricSans", sans-serif;
+  --font-austincyr: "AustinCyr", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+@theme {
+  --color-background: var(--background);
+  --color-fontColor: var(--fontColor);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-footer: var(--footer);
+  --color-customGray: var(--customGray);
 }
-
 body {
-  color: var(--foreground);
+  color: var(--background);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: var(--fontColor);
 }
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.navColor {
+  background-color: linear;
+}
+.sans {
+  font-family: var(--font-hurme);
+}
+.austin {
+  font-family: var(--font-austincyr);
+}
+.quick_sand {
+  font-family: "Quicksand", sans-serif;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+.banner {
+  background-image: url(./assets/banner.png);
+}
+.line-through-custom {
+  text-decoration: line-through;
+  text-decoration-color: #ff0000; /* Set the color of the line-through */
+}
+/* .nav{
+  background-image: url(./assets/specialOfferBg.png);
+} */
