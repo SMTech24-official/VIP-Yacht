@@ -1,9 +1,6 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
-/* @theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-} */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
+
 @font-face {
   font-family: "HurmeGeometricSans";
   src: url("/fonts/HurmeGeometricSansFamily/HurmeGeometricSans1-Light.otf")
@@ -84,9 +81,7 @@ body {
   max-width: 1200px;
   margin: auto;
 }
-.navColor {
-  background-color: linear;
-}
+/* font */
 .sans {
   font-family: var(--font-hurme);
 }
@@ -99,13 +94,30 @@ body {
 .poppins {
   font-family: "Poppins", sans-serif;
 }
+.nunito {
+  font-family: "Nunito", sans-serif;
+}
+/* font */
 .banner {
   background-image: url(./assets/banner.png);
 }
 .line-through-custom {
   text-decoration: line-through;
-  text-decoration-color: #ff0000; /* Set the color of the line-through */
+  text-decoration-color: #ff0000;
+}
+.custom-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #606060 !important;
+}
+
+.custom-tabs .ant-tabs-ink-bar {
+  background-color: #606060 !important;
+}
+:where(.css-dev-only-do-not-override-1v613y0).ant-tabs .ant-tabs-tab {
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 /* .nav{
-  background-image: url(./assets/specialOfferBg.png);
+  background-image: url(./assets/details2.png);
 } */

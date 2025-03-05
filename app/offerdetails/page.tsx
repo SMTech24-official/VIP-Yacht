@@ -1,11 +1,14 @@
 import React from "react";
-import OfferDetailsComponent from "../components/specialOffer/OfferDetails";
+import Details from "../components/specialOffer/Details";
+import Banner from "../components/common/Banner";
 
 const OfferDetails = () => {
   return (
     <div>
-      <OfferDetailsComponent />
-      <div className="container"></div>
+      <Banner className="" title="SEMPER FIDELIS" details="" />
+      <div className="container">
+        <Details />
+      </div>
     </div>
   );
 };

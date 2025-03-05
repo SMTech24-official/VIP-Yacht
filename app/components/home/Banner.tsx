@@ -4,6 +4,7 @@ import banner from "../../assets/banner.png";
 import Image from "next/image";
 import Btn from "../common/Btn";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import ChooseField from "../common/ChooseField";
 
 const Banner = () => {
   const [selected, setSelected] = useState("");
@@ -71,6 +72,8 @@ const Banner = () => {
           </div>
         </div>
       </div>
+
+      {/* <ChooseField /> */}
     </div>
   );
 };
