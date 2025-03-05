@@ -5,6 +5,7 @@ import Image from "next/image";
 import Btn from "../common/Btn";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import ChooseField from "../common/ChooseField";
+import BannerDropdown from "../home/BannerDropdown";
 
 const Banner = () => {
   const [selected, setSelected] = useState("");
@@ -20,7 +21,7 @@ const Banner = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className=" w-full bg-[url(./assets/banner.png)] bg-no-repeat bg-center bg-cover pt-[121px] pb-[320px] text-white">
+    <div className=" w-full bg-[url(./assets/banner.png)] bg-no-repeat bg-center bg-cover pt-[121px] pb-[320px] text-white relative">
       <div className="container flex items-center justify-center flex-col relative">
         {/* banner */}
         <h1 className="md:max-w-[990px] text-center text-5xl font-medium leading-[120%] uppercase austin ">
@@ -34,43 +35,8 @@ const Banner = () => {
         <Btn btnText="Get in Touch" />
       </div>
       {/* choose option */}
-      <div className="absolute  left-0">
-        <div className="relative w-[233px]">
-          <div className="relative">
-            {/* Custom Button to show selected option */}
-            <button className="w-full h-full rounded-lg bg-gradient-to-b from-[#94949462] to-[#fff] px-4 py-2 text-black border border-gray-300 shadow-md">
-              {selected || "Please choose"}
-              <span
-                className="absolute top-1/2 right-4 transform -translate-y-1/2 pointer-events-none"
-                onClick={toggleOpen}
-              >
-                <MdKeyboardArrowDown />
-              </span>
-            </button>
-
-            {/* Custom Dropdown Options */}
-            <div className="absolute mt-2 w-full bg-white rounded-lg border border-gray-300 shadow-md">
-              <div
-                onClick={() => setSelected("Destination 1")}
-                className="px-4 py-2 text-black cursor-pointer hover:bg-gray-100 rounded-t-lg"
-              >
-                Destination 1
-              </div>
-              <div
-                onClick={() => setSelected("Destination 2")}
-                className="px-4 py-2 text-black cursor-pointer hover:bg-gray-100"
-              >
-                Destination 2
-              </div>
-              <div
-                onClick={() => setSelected("Destination 3")}
-                className="px-4 py-2 text-black cursor-pointer hover:bg-gray-100 rounded-b-lg"
-              >
-                Destination 3
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="absolute  left-1/2 -translate-x-1/2 top-[94%]  container">
+        <BannerDropdown />
       </div>
 
       {/* <ChooseField /> */}

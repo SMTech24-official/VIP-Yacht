@@ -9,21 +9,26 @@ import { usePathname } from "next/navigation";
 const menuItem = [
   {
     id: 1,
-    name: "Yacht Charter",
+    name: "Home",
     link: "/",
   },
   {
     id: 2,
+    name: "Yacht Charter",
+    link: "/yachtcharter",
+  },
+  {
+    id: 3,
     name: "About us",
     link: "/about",
   },
   {
-    id: 3,
+    id: 4,
     name: "Special Offer",
     link: "/specialoffer",
   },
   {
-    id: 4,
+    id: 5,
     name: "Management",
     link: "/management",
   },
@@ -58,7 +63,7 @@ const Navbar = () => {
         {/* btn */}
         <Link
           href="/"
-          className="bg-white rounded-[40px] px-[25px] py-3 text-fontColor font-medium austin"
+          className="bg-white rounded-[40px] px-[25px] py-3 text-fontColor font-medium austin hover:bg-primary hover:text-white duration-300 transition-all"
         >
           Contact
         </Link>

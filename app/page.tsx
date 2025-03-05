@@ -6,6 +6,7 @@ import SpecialOffers from "./components/home/SpecialOffers";
 import Blog from "./components/home/Blog";
 import AboutUs from "./components/home/AboutUs";
 import NewsLatter from "./components/home/NewsLatter";
+import Choose from "./components/home/Choose";
 
 const page = () => {
   return (
@@ -14,6 +15,9 @@ const page = () => {
       <Type />
       <SpecialOffers />
       <AboutUs />
+      <div className="container">
+        <Choose />
+      </div>
       <Blog />
       <NewsLatter />
     </div>

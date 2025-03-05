@@ -27,7 +27,7 @@ const SpecialOfferCard: React.FC<SpecialOfferCardProps> = ({
   return (
     <div>
       <Link
-        href=""
+        href="/offerdetails"
         className="w-[384px] h-[350px] rounded-lg overflow-hidden relative z-10 cursor-pointer"
       >
         <div className="w-full h-full absolute left-0 top-0 -z-10">

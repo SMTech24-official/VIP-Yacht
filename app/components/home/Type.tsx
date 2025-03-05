@@ -3,6 +3,7 @@ import type1 from "../../assets/type1.png";
 import Image from "next/image";
 // import Slider from "react-slick";
 import Heading from "../common/Heading";
+import TypeSlider from "../home/TypeSlider";
 // import "swiper/css";
 // import "swiper/css/navigation";
 // import "swiper/css/pagination";
@@ -23,13 +24,20 @@ const Type = () => {
           Dream Getaway!
         </p>
       </div>
-      <div className="right">
+      <div className="right flex gap-5">
+        <div className="w-[380px] rounded-lg">
+          <Image src={type1} alt="SEMPER VICTOR" width={400} height={400} />
+          <h3 className="austin text-xl font-medium mt-5 text-center">
+            SEMPER VICTOR
+          </h3>
+        </div>
         <div className="w-[384px] rounded-lg">
           <Image src={type1} alt="SEMPER VICTOR" width={400} height={400} />
           <h3 className="austin text-xl font-medium mt-5 text-center">
             SEMPER VICTOR
           </h3>
         </div>
+        {/* <TypeSlider /> */}
       </div>
     </div>
   );
