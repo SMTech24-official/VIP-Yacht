@@ -1,10 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import banner from "../../assets/banner.png";
-import Image from "next/image";
 import Btn from "../common/Btn";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import ChooseField from "../common/ChooseField";
 import BannerDropdown from "../home/BannerDropdown";
 
 const Banner = () => {

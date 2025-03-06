@@ -1,6 +1,5 @@
 import React from "react";
 import Banner from "./components/home/Banner";
-import Btn from "./components/common/Btn";
 import Type from "./components/home/Type";
 import SpecialOffers from "./components/home/SpecialOffers";
 import Blog from "./components/home/Blog";

@@ -9,7 +9,7 @@ const page = () => {
       <Banner className="" title="yacht charter" details="" />
       <div className="container py-20">
         <Filters />
-        {/* <CardComponent /> */}
+        <CardComponent />
       </div>
     </div>
   );

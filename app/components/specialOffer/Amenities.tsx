@@ -96,7 +96,7 @@ const Amenities = () => {
             Room Highlights
           </h2>
           {room?.map((item) => (
-            <div className="flex gap-1 items-center">
+            <div key={item.id} className="flex gap-1 items-center">
               <GoDotFill className="text-customGray text-[8px]" />
               <li className="text-[#606060] text-base nunito leading-[180%]">
                 {item.list}

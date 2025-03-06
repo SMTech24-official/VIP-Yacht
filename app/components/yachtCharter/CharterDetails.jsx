@@ -1,9 +1,8 @@
 import React from "react";
-import moduleName from "module";
 
 const CardItems = [
     {
-        
+
     }
 ];
 

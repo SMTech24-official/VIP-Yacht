@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/select";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { motion } from "framer-motion";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 export default function YachtSearch() {
   return (

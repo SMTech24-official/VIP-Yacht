@@ -5,11 +5,9 @@ import type2 from "../../assets/type2.png";
 import Image from "next/image";
 // import Slider from "react-slick";
 import Heading from "../common/Heading";
-import TypeSlider from "../home/TypeSlider";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { it } from "node:test";
 
 const slideItem = [
   {
