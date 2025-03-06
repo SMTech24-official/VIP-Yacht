@@ -25,19 +25,19 @@ export default function YachtSearch() {
             className="backdrop-blur-lg bg-gray-600/20 rounded-xl overflow-hidden"
             key={index}
           >
-            <label className="block text-white mb-1 ml-6 mt-4 austin ">
+            <label className="block text-white mb-1 ml-6 mt-4 austin text-sm ">
               {label}
             </label>
-            <select className="w-[233px] h-[50px] py-1 rounded-lg focus:outline-none border-none relative bg-gradient-to-r text-white uppercase px-4">
+            <select className="w-[233px] h-[50px] py-1 rounded-lg focus:outline-none border-none relative bg-gradient-to-r text-white uppercase px-4 capitalize">
               <option
                 value=""
-                className="text-gray-600 austin text-base"
+                className="text-gray-600 austin text-sm capitalize"
               >{`Please choose`}</option>
               {options.map((option) => (
                 <option
                   key={option.value}
                   value={option.value}
-                  className="text-gray-600 austin text-base"
+                  className="text-gray-600 austin text-sm capitalize"
                 >
                   {option.label}
                 </option>
