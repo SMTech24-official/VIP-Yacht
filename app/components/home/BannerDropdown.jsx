@@ -1,24 +1,17 @@
 "use client";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { motion } from "framer-motion";
 
 export default function YachtSearch() {
-  // const labels = [
-  //   "Destinations",
-  //   "Type Of Yacht",
-  //   "Yacht lenght",
-  //   "Number Of Guest",
-  // ];
+  const options = [
+    { value: "option1", label: "Option 1" },
+    { value: "option2", label: "Option 2" },
+    { value: "option3", label: "Option 3" },
+  ];
 
   return (
-    <div className="flex justify-between p-4 rounded-lg text-white relative ">
+    <div className="flex justify-between p-4 rounded-lg text-white relative">
       {["Destination", "Type of Yacht", "Yacht Length", "Number of Guests"].map(
         (label, index) => (
           <motion.div
@@ -29,27 +22,27 @@ export default function YachtSearch() {
               delay: index * 0.2,
               ease: "easeOut",
             }}
-            className="backdrop-blur-lg bg-white/30 rounded-xl overflow-hidden"
+            className="backdrop-blur-lg bg-gray-600/20 rounded-xl overflow-hidden"
             key={index}
           >
-            <Select>
-              <SelectTrigger
-                className="w-[233px] h-[90px] text-white py-1 rounded-lg focus:outline-none border-none relative bg-gradient-to-r"
-                placeholder="Please Choose"
-              >
-                <div
-                  className="select-trigger-placeholder austin font-medium"
-                  data-placeholder={label}
+            <label className="block text-white mb-1 ml-6 mt-4 austin ">
+              {label}
+            </label>
+            <select className="w-[233px] h-[50px] py-1 rounded-lg focus:outline-none border-none relative bg-gradient-to-r text-white uppercase px-4">
+              <option
+                value=""
+                className="text-gray-600 austin text-base"
+              >{`Please choose`}</option>
+              {options.map((option) => (
+                <option
+                  key={option.value}
+                  value={option.value}
+                  className="text-gray-600 austin text-base"
                 >
-                  <SelectValue className="text-white austin uppercase" />
-                </div>
-              </SelectTrigger>
-              <SelectContent className="bg-black/40 text-white">
-                <SelectItem value="option1">Option 1</SelectItem>
-                <SelectItem value="option2">Option 2</SelectItem>
-                <SelectItem value="option3">Option 3</SelectItem>
-              </SelectContent>
-            </Select>
+                  {option.label}
+                </option>
+              ))}
+            </select>
           </motion.div>
         )
       )}
@@ -62,7 +55,7 @@ export default function YachtSearch() {
           ease: "easeOut",
         }}
       >
-        <button className="bg-primary cursor-pointer text-white px-[42px] h-[90px] rounded-lg flex items-center gap-2 austin uppercase font-medium">
+        <button className="bg-primary cursor-pointer text-white px-[42px] h-[95px] rounded-lg flex items-center gap-2 uppercase font-medium">
           <HiMagnifyingGlass className="text-white text-xl" /> SEARCH
         </button>
       </motion.div>
