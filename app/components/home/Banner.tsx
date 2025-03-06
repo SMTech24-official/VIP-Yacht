@@ -22,7 +22,7 @@ const Banner = () => {
   };
   return (
     <div className=" w-full bg-[url(./assets/banner.png)] bg-no-repeat bg-center bg-cover pt-[121px] pb-[320px] text-white relative">
-      <div className="container flex items-center justify-center flex-col relative">
+      <div className="container flex items-center justify-center flex-col relative z-10">
         {/* banner */}
         <h1 className="md:max-w-[990px] text-center text-5xl font-medium leading-[120%] uppercase austin ">
           Create timeless moments that you'll treasure forever.
@@ -35,7 +35,7 @@ const Banner = () => {
         <Btn btnText="Get in Touch" />
       </div>
       {/* choose option */}
-      <div className="absolute  left-1/2 -translate-x-1/2 top-[94%]  container">
+      <div className="absolute  left-1/2 -translate-x-1/2 top-[90%]  container z-20">
         <BannerDropdown />
       </div>
 

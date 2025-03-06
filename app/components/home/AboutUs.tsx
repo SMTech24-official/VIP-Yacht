@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import Heading from "../common/Heading";
 import Para from "../common/Para";
 import aboutImg from "../../assets/about1.png";
 import Image from "next/image";
 import Btn from "../common/Btn";
+import { motion } from "framer-motion";
 
 const AboutUs = () => {
   return (
@@ -23,12 +25,20 @@ const AboutUs = () => {
           />
           <Btn btnText="LEARN MORE" />
         </div>
-        <div className="absolute right-[12%] top-[35%] z-20 w-[510px] h-[350px] overflow-hidden">
-          <video width="800" autoPlay>
-            <source src="" type="video/mp4" />
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+          }}
+          className="absolute right-[12%] top-[35%] z-20 w-[520px] rounded-[8px] overflow-hidden "
+        >
+          <video width="800" className="w-full h-full rounded-[8px]" controls>
+            <source src="./about.mp4" type="video/mp4" />
             <p>Your browser does not support the video tag.</p>
           </video>
-        </div>
+        </motion.div>
       </div>
 
       <div className="right absolute right-0 top-[-4%] w-[710px] z-0">

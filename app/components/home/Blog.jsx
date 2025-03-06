@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import Heading from "../common/Heading";
 import BlogCard from "../common/BlogCard";
 import blog1 from "../../assets/blog1.png";
 import Btn from "../common/Btn";
+import { motion } from "framer-motion";
 
 const blogItem = [
   {
@@ -31,8 +33,21 @@ const Blog = () => {
     <div className="container flex flex-col items-center justify-center">
       <Heading className="text-center mb-10" headingTxt="Blog" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-[90px]">
-        {blogItem.map((item) => (
-          <BlogCard key={item.id} blog={item} />
+        {blogItem.map((item, index) => (
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.2,
+              ease: "easeOut",
+            }}
+          >
+            <BlogCard key={item.id} blog={item} />
+          </motion.div>
         ))}
       </div>
       <Btn btnText="See more" />

@@ -1,19 +1,50 @@
+"use client";
 import React from "react";
 import type1 from "../../assets/type1.png";
+import type2 from "../../assets/type2.png";
 import Image from "next/image";
 // import Slider from "react-slick";
 import Heading from "../common/Heading";
 import TypeSlider from "../home/TypeSlider";
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-// import { Navigation, Pagination } from "swiper/modules";
-// import Slider from "react-slick";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { it } from "node:test";
+
+const slideItem = [
+  {
+    id: 1,
+    img: type1,
+    name: "SEMPER VICTOR",
+  },
+  {
+    id: 1,
+    img: type2,
+    name: "SEMPER VICTOR",
+  },
+  {
+    id: 1,
+    img: type1,
+    name: "SEMPER VICTOR",
+  },
+  {
+    id: 1,
+    img: type2,
+    name: "SEMPER VICTOR",
+  },
+];
 
 const Type = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+  };
   return (
-    <div className="container py-[120px] flex gap-6">
-      <div className="left w-[384px]">
+    <div className="container pb-[120px] pt-[200px] grid grid-cols-3 gap-6">
+      <div className="left col-span-1">
         <Heading
           className=""
           headingTxt="What type of yacht charter is right for you?"
@@ -24,23 +55,32 @@ const Type = () => {
           Dream Getaway!
         </p>
       </div>
-      <div className="right flex gap-5">
-        <div className="w-[380px] rounded-lg">
-          <Image src={type1} alt="SEMPER VICTOR" width={400} height={400} />
-          <h3 className="austin text-xl font-medium mt-5 text-center">
-            SEMPER VICTOR
-          </h3>
+      <div className="right col-span-2">
+        <div className="">
+          <Slider {...settings}>
+            {slideItem?.map((item) => (
+              <div className="" key={item.id}>
+                <div className="w-[380px] rounded-lg">
+                  <Image
+                    src={item.img}
+                    alt={item.name}
+                    width={400}
+                    height={400}
+                  />
+                  <h3 className="austin text-xl font-medium mt-5 text-center">
+                    {item.name}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </Slider>
         </div>
-        <div className="w-[384px] rounded-lg">
-          <Image src={type1} alt="SEMPER VICTOR" width={400} height={400} />
-          <h3 className="austin text-xl font-medium mt-5 text-center">
-            SEMPER VICTOR
-          </h3>
-        </div>
-        {/* <TypeSlider /> */}
       </div>
     </div>
   );
 };
+{
+  /* <TypeSlider /> */
+}
 
 export default Type;

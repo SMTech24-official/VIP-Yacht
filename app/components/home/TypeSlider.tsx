@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,8 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// import "./styles.css";
-
 // import required modules
 import { Pagination } from "swiper/modules";
 
@@ -15,8 +14,8 @@ export default function App() {
   return (
     <>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        slidesPerView={2}
+        spaceBetween={10}
         pagination={{
           clickable: true,
         }}
@@ -24,32 +23,44 @@ export default function App() {
         className="mySwiper"
       >
         <SwiperSlide>
-          {" "}
-          <div className="w-[384px] rounded-lg">
-            <img src="../../assets/type1.png" alt="" />
+          <div className="w-[384px] h-[350px] rounded-lg">
+            <img
+              src="./type1.png"
+              alt="SEMPER VICTOR"
+              width={384}
+              height={400}
+            />
             <h3 className="austin text-xl font-medium mt-5 text-center">
               SEMPER VICTOR
             </h3>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
-          <div className="w-[384px] rounded-lg">
-            <img src="../../assets/type2.png" alt="" />
+          <div className="w-[384px] h-[350px] rounded-lg">
+            <img
+              src="./type1.png"
+              alt="SEMPER VICTOR"
+              width={384}
+              height={400}
+            />
             <h3 className="austin text-xl font-medium mt-5 text-center">
               SEMPER VICTOR
             </h3>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          {" "}
+        {/* <SwiperSlide>
           <div className="w-[384px] rounded-lg">
-            <img src="../../assets/type1.png" alt="" />
+            <img
+              src="./type1.png"
+              alt="SEMPER VICTOR"
+              width={400}
+              height={400}
+            />
             <h3 className="austin text-xl font-medium mt-5 text-center">
               SEMPER VICTOR
             </h3>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </>
   );

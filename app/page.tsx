@@ -15,7 +15,10 @@ const page = () => {
       <Type />
       <SpecialOffers />
       <AboutUs />
-      <div className="container">
+      <div className="container py-[120px]" >
+        <h2 className="quick_sand font-bold text-[40px] text-center mb-10">
+          Choose your destination!
+        </h2>
         <Choose />
       </div>
       <Blog />

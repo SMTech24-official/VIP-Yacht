@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import Heading from "../common/Heading";
 import SpecialOfferCard from "../common/SpecialOfferCard";
 import { Cabin } from "next/font/google";
 import Btn from "../common/Btn";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const offerItem = [
   {
@@ -43,20 +45,36 @@ const SpecialOffers = () => {
     <div className="container pb-[120px] flex flex-col items-center justify-center">
       <Heading className="text-center mb-10" headingTxt="special offers" />
       <div className="flex gap-6 mb-6">
-        {offerItem?.map((item) => (
-          <SpecialOfferCard
-            key={item.id}
-            name={item.name}
-            oldPrice={item.oldPrice.toString()}
-            newPrice={item.newPrice.toString()}
-            guestNo={item.guest}
-            bedNo={item.bed}
-            cabinNO={item.cabin}
-            bathroomNo={item.bathroom}
-          />
+        {offerItem?.map((item, index) => (
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.2,
+              ease: "easeOut",
+            }}
+            className=""
+          >
+            <SpecialOfferCard
+              key={item.id}
+              name={item.name}
+              oldPrice={item.oldPrice.toString()}
+              newPrice={item.newPrice.toString()}
+              guestNo={item.guest}
+              bedNo={item.bed}
+              cabinNO={item.cabin}
+              bathroomNo={item.bathroom}
+            />
+          </motion.div>
         ))}
       </div>
-      <Btn btnText="See more" />
+      <Link href="/specialoffer">
+        <Btn btnText="See more" />
+      </Link>
     </div>
   );
 };
