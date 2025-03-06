@@ -33,7 +33,7 @@ const slideItem = [
 ];
 
 const Type = () => {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,

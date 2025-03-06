@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import SpecialOffer1 from "../../assets/specialOffer1.png";
-import { GoDotFill } from "react-icons/go";
 import { BsDot } from "react-icons/bs";
 import Link from "next/link";
 

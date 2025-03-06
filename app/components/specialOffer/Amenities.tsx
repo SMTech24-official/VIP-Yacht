@@ -109,7 +109,7 @@ const Amenities = () => {
             Services
           </h2>
           {services?.map((item) => (
-            <div className="flex gap-1 items-center">
+            <div key={item.id} className="flex gap-1 items-center">
               <GoDotFill className="text-customGray text-[8px]" />
               <li className="text-[#606060] text-base nunito leading-[180%]">
                 {item.list}
@@ -122,7 +122,7 @@ const Amenities = () => {
             Bed & Bath
           </h2>
           {bedAndBath?.map((item) => (
-            <div className="flex gap-1 items-center">
+            <div key={item.id} className="flex gap-1 items-center">
               <GoDotFill className="text-customGray text-[8px]" />
               <li className="text-[#606060] text-base nunito leading-[180%] ">
                 {item.list}
@@ -135,7 +135,7 @@ const Amenities = () => {
             Technology
           </h2>
           {Technology?.map((item) => (
-            <div className="flex gap-1 items-center">
+            <div key={item.id} className="flex gap-1 items-center">
               <GoDotFill className="text-customGray text-[8px]" />
               <li className="text-[#606060] text-base nunito leading-[180%]">
                 {item.list}

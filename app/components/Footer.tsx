@@ -44,25 +44,7 @@ const itemsHelp = [
     link: "/",
   },
 ];
-const bottomItem = [
-  {
-    id: 1,
-    name: "Legal Notice",
-    link: "/",
-    span: <span>|</span>,
-  },
-  {
-    id: 2,
-    name: "Privacy Policy",
-    link: "/",
-    span: <span>|</span>,
-  },
-  {
-    id: 3,
-    name: "Cookies Policy",
-    link: "/",
-  },
-];
+
 const Footer = () => {
   return (
     <div className="bg-footer pt-20 pb-5 px-[120px] text-white">
@@ -75,7 +57,7 @@ const Footer = () => {
               <Image src={logo} alt="logo" />
             </div>
             <p className="austin font-medium mb-10 text-base leading-[140%] mt-2">
-              Redefining Luxury Sailing Across the World's Finest Waters.
+              Redefining Luxury Sailing Across the World&apos;s Finest Waters.
             </p>
             <h4 className="mb-5">Follow Us</h4>
             <div className="flex items-center">

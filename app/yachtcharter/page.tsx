@@ -7,8 +7,10 @@ const page = () => {
   return (
     <div>
       <Banner className="" title="yacht charter" details="" />
-      <div className="container py-20">
-        <Filters />
+      <div className="container py-20 grid grid-cols-3">
+        <div className="col-span-1">
+          <Filters />
+        </div>
         <CardComponent />
       </div>
     </div>

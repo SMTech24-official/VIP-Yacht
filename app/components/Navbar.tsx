@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React from "react";
 import logo from "../assets/Logo.png";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

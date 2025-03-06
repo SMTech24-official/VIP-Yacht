@@ -1,6 +1,5 @@
-import Image from "next/image";
+
 import React from "react";
-import bg from "../../assets/specialOfferBg.png";
 interface BannerProps {
   className: string;
   title: string;

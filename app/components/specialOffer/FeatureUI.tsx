@@ -1,7 +1,6 @@
 import React from "react";
 import { Descriptions } from "antd";
 import type { DescriptionsProps } from "antd";
-import { div } from "framer-motion/client";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoBed } from "react-icons/io5";
 import { HiUserGroup } from "react-icons/hi";

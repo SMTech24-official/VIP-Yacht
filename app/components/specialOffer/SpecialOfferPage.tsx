@@ -79,6 +79,7 @@ const SpecialOfferPage = () => {
         <div className="flex gap-6 mb-6 flex-wrap">
           {offerItem?.map((item, index) => (
             <motion.div
+              key={item.id}
               initial={{ opacity: 0, y: 50 }} // Initial state: slightly transparent and off-screen
               animate={{ opacity: 1, y: 0 }} // Final state: fully opaque and on screen
               transition={{

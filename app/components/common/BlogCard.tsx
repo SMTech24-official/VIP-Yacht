@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import blogIcon from "../../assets/blogIcon.png";
 import Link from "next/link";
@@ -6,7 +6,7 @@ import { ImArrowRight2 } from "react-icons/im";
 
 interface BlogCardProps {
   blog: {
-    blogImg: any; // ✅ Changed from string to 'any' to support Next.js image imports
+    blogImg: StaticImageData | string;
     blogDate: string;
     blogTitle: string;
   };

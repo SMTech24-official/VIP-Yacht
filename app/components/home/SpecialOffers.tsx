@@ -2,7 +2,6 @@
 import React from "react";
 import Heading from "../common/Heading";
 import SpecialOfferCard from "../common/SpecialOfferCard";
-import { Cabin } from "next/font/google";
 import Btn from "../common/Btn";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -47,6 +46,7 @@ const SpecialOffers = () => {
       <div className="flex gap-6 mb-6">
         {offerItem?.map((item, index) => (
           <motion.div
+            key={item.id}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{
               opacity: 1,
