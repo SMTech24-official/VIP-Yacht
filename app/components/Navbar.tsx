@@ -10,7 +10,7 @@ import { Sheet, SheetContent } from "@/components/ui/sheet";
 const menuItem = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "Yacht Charter", link: "/yachtcharter" },
-  { id: 3, name: "About Us", link: "/about" },
+  { id: 3, name: "About Us", link: "/aboutus" },
   { id: 4, name: "Special Offer", link: "/specialoffer" },
   { id: 5, name: "Management", link: "/management" },
 ];
