@@ -48,6 +48,14 @@
   font-weight: 600;
   font-style: normal;
 }
+.hero {
+  background-color: linear-gradient(
+    183deg,
+    rgba(0, 0, 0, 0) 46.13%,
+    rgba(0, 0, 0, 0.2) 62.71%,
+    rgba(0, 0, 0, 0.4) 84.27%
+  );
+}
 :root {
   --fontColor: #252525;
   --primary: #31b3ba;
