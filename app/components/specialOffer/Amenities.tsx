@@ -90,54 +90,54 @@ const Technology = [
 const Amenities = () => {
   return (
     <div className="mb-[120px] mt-10">
-      <div className="grid grid-cols-2 gap-y-10 mb-[120px]">
+      <div className="grid grid-cols-2 gap-x-3 md:gap-x-0  gap-y-10 mb-[120px]">
         <ul className="">
-          <h2 className="quick_sand font-bold text-2xl mb-4 ">
+          <h2 className="quick_sand font-bold text-lg md:text-2xl mb-4 ">
             Room Highlights
           </h2>
           {room?.map((item) => (
             <div key={item.id} className="flex gap-1 items-center">
               <GoDotFill className="text-customGray text-[8px]" />
-              <li className="text-[#606060] text-base nunito leading-[180%]">
+              <li className="text-[#606060] text-sm md:text-base nunito leading-[180%]">
                 {item.list}
               </li>
             </div>
           ))}
         </ul>
         <ul className="">
-          <h2 className="quick_sand font-bold text-2xl mb-4 gap-y-10">
+          <h2 className="quick_sand font-bold text-lg md:text-2 mb-4 gap-y-10">
             Services
           </h2>
           {services?.map((item) => (
             <div key={item.id} className="flex gap-1 items-center">
               <GoDotFill className="text-customGray text-[8px]" />
-              <li className="text-[#606060] text-base nunito leading-[180%]">
+              <li className="text-[#606060] text-sm md:text-base nunito leading-[180%]">
                 {item.list}
               </li>
             </div>
           ))}
         </ul>
         <ul className="">
-          <h2 className="quick_sand font-bold text-2xl mb-4 gap-y-10">
+          <h2 className="quick_sand font-bold text-lg md:text-2 mb-4 gap-y-10">
             Bed & Bath
           </h2>
           {bedAndBath?.map((item) => (
             <div key={item.id} className="flex gap-1 items-center">
               <GoDotFill className="text-customGray text-[8px]" />
-              <li className="text-[#606060] text-base nunito leading-[180%] ">
+              <li className="text-[#606060] text-sm md:text-basese nunito leading-[180%] ">
                 {item.list}
               </li>
             </div>
           ))}
         </ul>
         <ul className="">
-          <h2 className="quick_sand font-bold text-2xl mb-4 gap-y-10">
+          <h2 className="quick_sand font-bold text-lg md:text-2 mb-4 gap-y-10">
             Technology
           </h2>
           {Technology?.map((item) => (
-            <div key={item.id} className="flex gap-1 items-center">
-              <GoDotFill className="text-customGray text-[8px]" />
-              <li className="text-[#606060] text-base nunito leading-[180%]">
+            <div key={item.id} className="flex gap-1 ">
+              <GoDotFill className="text-customGray text-[8px] mt-2" />
+              <li className="text-[#606060] text-sm md:text-base nunito leading-[180%]">
                 {item.list}
               </li>
             </div>

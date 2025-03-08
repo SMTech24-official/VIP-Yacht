@@ -41,9 +41,9 @@ const offerItem = [
 
 const SpecialOffers = () => {
   return (
-    <div className="container pb-[120px] flex flex-col items-center justify-center">
+    <div className="container px-2 md:px-0 pb-[120px] flex flex-col items-center justify-center">
       <Heading className="text-center mb-10" headingTxt="special offers" />
-      <div className="flex gap-6 mb-6">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mb-6">
         {offerItem?.map((item, index) => (
           <motion.div
             key={item.id}
@@ -57,7 +57,7 @@ const SpecialOffers = () => {
               delay: index * 0.2,
               ease: "easeOut",
             }}
-            className=""
+            className="mb-2"
           >
             <SpecialOfferCard
               key={item.id}

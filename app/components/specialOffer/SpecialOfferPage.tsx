@@ -75,7 +75,7 @@ const SpecialOfferPage = () => {
         details=" Explore our latest special offers on charter yachts, available now!
         Discover exclusive deals below."
       />
-      <div className="container ">
+      <div className="container px-2 md:px-0">
         <div className="flex gap-6 mb-6 flex-wrap">
           {offerItem?.map((item, index) => (
             <motion.div

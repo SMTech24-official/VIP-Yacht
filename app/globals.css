@@ -150,6 +150,9 @@ body {
   font-weight: 500;
   text-transform: capitalize;
 }
+.top-4 {
+  top: calc(var(--spacing) * 9);
+}
 .select-trigger-placeholder::before {
   content: attr(data-placeholder);
   color: rgba(255, 255, 255, 255); /* Set placeholder color */
@@ -214,7 +217,9 @@ body {
   background-color: var(--primary);
   color: white;
 }
-
+.no-colon .ant-descriptions-item-label::after {
+  content: ""; /* Remove the colon */
+}
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);

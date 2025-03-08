@@ -39,9 +39,23 @@ const Type = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024, // For tablets
+        settings: {
+          slidesToShow: 2, // Show 2 slides on tablets
+        },
+      },
+      {
+        breakpoint: 768, // For mobile screens
+        settings: {
+          slidesToShow: 1, // Show 1 slide on mobile
+        },
+      },
+    ],
   };
   return (
-    <div className="container pb-[120px] pt-[200px] grid grid-cols-3 gap-6">
+    <div className="container pb-[120px] pt-[120px] md:pt-[200px] gap-6 grid grid-cols-1 md:grid-cols-3 px-2 md:px-0">
       <div className="left col-span-1">
         <Heading
           className=""
@@ -53,7 +67,7 @@ const Type = () => {
           Dream Getaway!
         </p>
       </div>
-      <div className="right col-span-2">
+      <div className="right col-span-1 md:col-span-2">
         <div className="">
           <Slider {...settings}>
             {slideItem?.map((item) => (
@@ -64,6 +78,7 @@ const Type = () => {
                     alt={item.name}
                     width={400}
                     height={400}
+                    className="rounded-lg"
                   />
                   <h3 className="austin text-xl font-medium mt-5 text-center">
                     {item.name}

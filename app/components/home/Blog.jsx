@@ -30,9 +30,9 @@ const blogItem = [
 
 const Blog = () => {
   return (
-    <div className="container flex flex-col items-center justify-center">
+    <div className="container px-2 md:px-0 flex flex-col items-center justify-center">
       <Heading className="text-center mb-10" headingTxt="Blog" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-[90px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 md:mb-[90px]">
         {blogItem.map((item, index) => (
           <motion.div
             initial={{ opacity: 0, y: 50 }}

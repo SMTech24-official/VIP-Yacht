@@ -47,15 +47,15 @@ const itemsHelp = [
 
 const Footer = () => {
   return (
-    <div className="bg-footer pt-20 pb-5 px-[120px] text-white">
-      <div className="container flex flex-col md:gap-[84px]">
+    <div className="bg-footer pt-20 pb-5 md:px-[120px] text-white">
+      <div className="container px-2 md:px-0 flex flex-col md:gap-[84px] ">
         {/* top */}
-        <div className="top flex justify-between gap-[181px] w-full">
+        <div className="top flex md:flex-row flex-col justify-between md:gap-[181px] w-full">
           {/* left */}
           <div className="left max-w-[250px]">
-            <div className="">
+            <Link href="/" className="">
               <Image src={logo} alt="logo" />
-            </div>
+            </Link>
             <p className="austin font-medium mb-10 text-base leading-[140%] mt-2">
               Redefining Luxury Sailing Across the World&apos;s Finest Waters.
             </p>
@@ -79,7 +79,7 @@ const Footer = () => {
             </div>
           </div>
           {/* right */}
-          <div className="right flex-1 flex justify-between">
+          <div className="right my-8 md:my-0 flex-1 flex flex-row flex-wrap gap-5 md:gap-0 justify-between">
             <div className="">
               <h3 className="font-medium leading-[130%] mb-4 text-xl">
                 Quick links
@@ -144,7 +144,7 @@ const Footer = () => {
           </div>
         </div>
         {/* bottom */}
-        <div className="bottom flex justify-between border-t border-t-white pt-2">
+        <div className="bottom flex flex-col md:flex-row justify-between border-t border-t-white pt-2">
           <div className="left">
             <h3 className="sans">© 2025 Global Boonyacht</h3>
           </div>

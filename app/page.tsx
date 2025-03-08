@@ -14,8 +14,8 @@ const page = () => {
       <Type />
       <SpecialOffers />
       <AboutUs />
-      <div className="container py-[120px]" >
-        <h2 className="quick_sand font-bold text-[40px] text-center mb-10">
+      <div className="container px-2 md:px-0 py-[60px] md:py-[120px]">
+        <h2 className="quick_sand font-bold text-2xl md:text-[40px] text-center mb-10">
           Choose your destination!
         </h2>
         <Choose />

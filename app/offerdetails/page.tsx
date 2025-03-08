@@ -6,7 +6,7 @@ const OfferDetails = () => {
   return (
     <div>
       <Banner className="" title="SEMPER FIDELIS" details="" />
-      <div className="container">
+      <div className="container md:px-0 px-2">
         <h2 className="my-10 austin font-medium text-[32px] text-center">
           Details
         </h2>

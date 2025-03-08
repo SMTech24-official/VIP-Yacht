@@ -8,7 +8,7 @@ interface HeadingProps {
 const Heading: React.FC<HeadingProps> = ({ className, headingTxt }) => {
   return (
     <h2
-      className={`austin font-medium text-[40px] capitalize leading-[150%] ${className}`}
+      className={`austin font-medium text-2xl md:text-[40px] capitalize leading-[150%] ${className}`}
     >
       {headingTxt}
     </h2>

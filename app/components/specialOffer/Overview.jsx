@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 
 const Overview = () => {
   return (
-    <div className="mt-10 mb-[120px]">
-      <div className="flex gap-6 mb-[120px]">
-        <div className="left w-1/2">
+    <div className="mt-10 mb-[60px] md:mb-[120px]">
+      <div className="flex md:flex-row flex-col gap-6 mb-[60px] md:mb-[120px]">
+        <div className="left md:w-1/2">
           <p className="sans text-xl leading-[150%]">
             Operation Area : Corsica, Sardinia, Italy, Marseille, Balearic Is.,
             Spain, Caribbean Sea
@@ -24,7 +24,7 @@ const Overview = () => {
             an elegant saloon and dining room amidship.
           </p>
         </div>
-        <div className="right w-1/2">
+        <div className="right md:w-1/2">
           <p className="flex gap-2 ml-1 leading-[190%]">
             <GoDotFill className="text-2xl" />
             Toward the aft, you’ll find a cutting-edge navigation station, chart

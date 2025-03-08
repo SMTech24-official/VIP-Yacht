@@ -29,7 +29,7 @@ const SpecialOfferCard: React.FC<SpecialOfferCardProps> = ({
         href="/offerdetails"
         className="w-[384px] h-[350px] rounded-lg overflow-hidden relative z-10 cursor-pointer group"
       >
-        <div className="overlay w-full opacity-0 h-full bg-[#0000006e] absolute left-0 top-0 group-hover:opacity-100 duration-300 transition-all"></div>
+        <div className="overlay w-full rounded-lg opacity-0 h-full bg-[#0000006e] absolute left-0 top-0 group-hover:opacity-100 duration-300 transition-all"></div>
         <div className="w-full h-full absolute left-0 top-0 -z-10">
           <Image
             src={SpecialOffer1}
@@ -50,18 +50,18 @@ const SpecialOfferCard: React.FC<SpecialOfferCardProps> = ({
             <span className=" text-[18px]">${newPrice}</span>
           </div>
           <ul className="flex gap-2 mb-5">
-            <li className="flex items-center justify-center">
+            <li className="flex items-center justify-center sans text-sm md:text-base">
               {guestNo} Guest
             </li>
-            <li className="flex items-center justify-center sans text-base">
+            <li className="flex items-center justify-center sans text-sm md:text-base">
               <BsDot className=" mr-2" />
               {bedNo} Bed
             </li>
-            <li className="flex items-center justify-center sans text-base">
+            <li className="flex items-center justify-center sans text-sm md:text-base">
               <BsDot className=" mr-2" />
               {cabinNO} Cabin
             </li>
-            <li className="flex items-center justify-center sans text-base">
+            <li className="flex items-center justify-center sans text-sm md:text-base">
               <BsDot className=" mr-2" />
               {bathroomNo} Bathroom
             </li>
