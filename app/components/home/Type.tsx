@@ -55,7 +55,7 @@ const Type = () => {
     ],
   };
   return (
-    <div className="container pb-[120px] pt-[120px] md:pt-[200px] gap-6 grid grid-cols-1 md:grid-cols-3 px-2 md:px-0">
+    <div className="container pb-[120px] pt-[200px] gap-6 grid grid-cols-1 md:grid-cols-3 px-2 md:px-0">
       <div className="left col-span-1">
         <Heading
           className=""
@@ -72,13 +72,13 @@ const Type = () => {
           <Slider {...settings}>
             {slideItem?.map((item) => (
               <div className="" key={item.id}>
-                <div className="w-[380px] rounded-lg">
+                <div className="md:max-w-[380px] w-full rounded-lg">
                   <Image
                     src={item.img}
                     alt={item.name}
                     width={400}
                     height={400}
-                    className="rounded-lg"
+                    className="rounded-lg w-full"
                   />
                   <h3 className="austin text-xl font-medium mt-5 text-center">
                     {item.name}

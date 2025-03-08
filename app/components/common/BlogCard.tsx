@@ -14,9 +14,14 @@ interface BlogCardProps {
 
 const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return (
-    <div className="flex flex-col gap-3 md:gap-5 md:w-[384px]">
+    <div className="flex flex-col gap-3 md:gap-5 md:max-w-[384px] w-full">
       <div className="w-full h-[350px] rounded-lg overflow-hidden">
-        <Image src={blog?.blogImg} alt="Blog Image" unoptimized />
+        <Image
+          src={blog?.blogImg}
+          alt="Blog Image"
+          className="w-full"
+          unoptimized
+        />
       </div>
       <div className="flex items-center gap-2">
         <Image src={blogIcon} alt="Blog Icon" />

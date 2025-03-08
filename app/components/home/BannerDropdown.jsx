@@ -12,9 +12,14 @@ export default function YachtSearch() {
   ];
 
   return (
-    <div className="flex flex-wrap gap-4 md:gap-0 md:justify-between justify-center items-center p-4 rounded-[8px] text-white relative">
-      {["Destination", "Type of Yacht", "Yacht Length", "Number of Guests"].map(
-        (label, index) => (
+    <div className="flex flex-col ">
+      <div className="grid md:grid-cols-5 grid-cols-2  gap-4 p-4 rounded-[8px] text-white relative">
+        {[
+          "Destination",
+          "Type of Yacht",
+          "Yacht Length",
+          "Number of Guests",
+        ].map((label, index) => (
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -52,8 +57,23 @@ export default function YachtSearch() {
               </select>
             </div>
           </motion.div>
-        )
-      )}
+        ))}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.2,
+            ease: "easeOut",
+          }}
+          className="hidden md:block"
+        >
+          <button className=" bg-primary w-full cursor-pointer text-white p-4 md:p-0 md:px-[42px] md:h-[88px] rounded-lg flex items-center gap-2 uppercase font-medium">
+            <HiMagnifyingGlass className="text-white text-xl" />{" "}
+            <span className="austin ">SEARCH</span>
+          </button>
+        </motion.div>
+      </div>
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -62,10 +82,11 @@ export default function YachtSearch() {
           delay: 0.2,
           ease: "easeOut",
         }}
+        className="w-full flex items-center justify-centers"
       >
-        <button className="bg-primary cursor-pointer text-white p-4 md:p-0 md:px-[42px] md:h-[88px] rounded-lg flex items-center gap-2 uppercase font-medium">
+        <button className=" bg-primary md:hidden mx-4 w-full  cursor-pointer text-white p-4 md:p-0 md:px-[42px] md:h-[88px] rounded-lg flex items-center justify-center gap-2 uppercase font-medium">
           <HiMagnifyingGlass className="text-white text-xl" />{" "}
-          <span className="austin hidden md:block">SEARCH</span>
+          <span className="austin ">SEARCH</span>
         </button>
       </motion.div>
     </div>

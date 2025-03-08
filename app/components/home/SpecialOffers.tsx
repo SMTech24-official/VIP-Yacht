@@ -41,7 +41,7 @@ const offerItem = [
 
 const SpecialOffers = () => {
   return (
-    <div className="container px-2 md:px-0 pb-[120px] flex flex-col items-center justify-center">
+    <div className="container px-2 md:px-0 pb-[120px] flex flex-col justify-center">
       <Heading className="text-center mb-10" headingTxt="special offers" />
       <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mb-6">
         {offerItem?.map((item, index) => (
