@@ -1,9 +1,8 @@
 @import "tailwindcss";
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
 
 @font-face {
   font-family: "HurmeGeometricSans";
@@ -61,6 +60,7 @@
   --primary: #31b3ba;
   --secondary: #25868c;
   --customGray: #6b6b6b;
+  --fontGray: #606060;
   --footer: #090c1d;
   --font-hurme: "HurmeGeometricSans", sans-serif;
   --font-austincyr: "AustinCyr", sans-serif;
@@ -110,6 +110,7 @@
   --color-secondary: var(--secondary);
   --color-footer: var(--footer);
   --color-customGray: var(--customGray);
+  --color-fontGray: var(--fontGray);
 }
 body {
   color: var(--background);
@@ -129,7 +130,7 @@ body {
   font-family: var(--font-austincyr);
 }
 .quick_sand {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Quicksand", sans-serif !important;
 }
 .poppins {
   font-family: "Poppins", sans-serif;
@@ -145,6 +146,9 @@ body {
   text-decoration: line-through;
   text-decoration-color: #ff0000;
 }
+.ant-form-item-label > label {
+  color: var(--primary) !important; /* Ensures the label color is applied */
+}
 .custom-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
   color: #606060 !important;
 }
@@ -152,6 +156,7 @@ body {
 .custom-tabs .ant-tabs-ink-bar {
   background-color: #606060 !important;
 }
+
 :where(.css-dev-only-do-not-override-1v613y0).ant-tabs .ant-tabs-tab {
   font-size: 18px;
   font-family: "Quicksand", sans-serif;
@@ -178,7 +183,7 @@ body {
 /* from-[#525D72] to-[#638ac0] */
 .swiper-slide {
   width: 300px;
-  width: 35% !important;
+  /* width: 35% !important; */
   height: 300px;
 }
 .swiper-slide img {
@@ -186,15 +191,55 @@ body {
   width: 100%;
   object-fit: contain;
 }
-.swiper-pagination-bullet {
-  width: 0 !important;
+/* slider component */
+.slider {
+  width: 100%;
+  height: 400px; /* Adjust as needed */
 }
-.swiper-button-prev {
-  width: 48px !important ;
-  height: 48px !important;
-  border-radius: 50% !important;
-  background-color: #ffffff !important;
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or "contain" based on preference */
 }
+/* Only target navigation buttons inside .custom-slider */
+.sliderBook {
+  position: relative;
+  max-width: 800px; /* Adjust as needed */
+  margin: auto;
+}
+
+.sliderBook .custom-prev,
+.sliderBook .custom-next {
+  position: absolute;
+  top: 52%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Position the buttons only for this slider */
+.sliderBook .custom-prev {
+  left: 10px;
+}
+
+.sliderBook .custom-next {
+  right: 10px;
+}
+
+/* Hover effect */
+.sliderBook .custom-prev:hover,
+.sliderBook .custom-next:hover {
+  background-color: var(--primary);
+}
+
+/* slider component */
+
 .custom-prev,
 .custom-next {
   position: absolute;

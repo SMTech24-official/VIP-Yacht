@@ -72,7 +72,7 @@ const Navbar = () => {
                   </li>
                 ))}
                 <Link
-                  href="/contact"
+                  href="/contactus"
                   className="block md:hidden austin bg-white rounded-full  text-base w-fit px-8 py-3 -ml-1 text-black font-semibold tracking-wide shadow-md hover:bg-primary hover:text-white transition-all duration-300"
                 >
                   Contact
@@ -102,7 +102,7 @@ const Navbar = () => {
 
         {/* Contact Button */}
         <Link
-          href="/contact"
+          href="/contactus"
           className="hidden austin lg:inline-block bg-white rounded-full px-6 py-3 text-[#021D45] font-semibold tracking-wide shadow-md hover:bg-primary hover:text-white transition-all duration-300"
         >
           Contact

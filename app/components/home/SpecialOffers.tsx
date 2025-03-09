@@ -41,7 +41,7 @@ const offerItem = [
 
 const SpecialOffers = () => {
   return (
-    <div className="container px-2 md:px-0 pb-[120px] flex flex-col justify-center">
+    <div className="container px-2 md:px-0 pb-[120px] flex flex-col md:items-center justify-center">
       <Heading className="text-center mb-10" headingTxt="special offers" />
       <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mb-6">
         {offerItem?.map((item, index) => (
@@ -72,9 +72,9 @@ const SpecialOffers = () => {
           </motion.div>
         ))}
       </div>
-      <Link href="/specialoffer">
-        <Btn btnText="See more" />
-      </Link>
+      <div className="">
+        <Btn href="/specialoffer" btnText="See more" />
+      </div>
     </div>
   );
 };

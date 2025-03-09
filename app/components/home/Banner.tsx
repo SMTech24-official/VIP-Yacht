@@ -16,7 +16,7 @@ const Banner = () => {
           forever. Transforming experiences into memories you&apos;ll hold close
           for a lifetime.
         </p>
-        <Btn btnText="Get in Touch" />
+        <Btn href="/contactus" btnText="Get in Touch" />
       </div>
       {/* choose option */}
       <div className="absolute  left-1/2 -translate-x-1/2 md:top-[89%] top-[80%] container z-20">

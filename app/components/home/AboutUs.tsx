@@ -23,7 +23,7 @@ const AboutUs = () => {
             className="pt-6 pb-10"
             paraText="At the heart of our global yacht network lies a dedication to delivering unparalleled experiences on the water. With a legacy of craftsmanship, innovation, and trust, we connect yacht enthusiasts worldwide, offering services that redefine luxury and adventure."
           />
-          <Btn btnText="LEARN MORE" />
+          <Btn href="/aboutus" btnText="LEARN MORE" />
         </div>
         <motion.div
           initial={{ opacity: 0, x: -50 }}

@@ -10,7 +10,7 @@ const OfferDetailsBookNow = () => {
       <p className="md:text-base text-sm">
         Get in touch with our team below. Inquire now
       </p>
-      <Btn btnText="book now" />
+      <Btn href="/booknow" btnText="book now" />
     </div>
   );
 };

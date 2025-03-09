@@ -49,15 +49,15 @@ const CardComponent = ({ charter }: { charter: Charter }) => {
         <li className="flex items-center justify-center text-xs md:text-base">
           Guest {charter?.guest}
         </li>
-        <li className="flex items-center justify-center sans text-xs md:text-base">
+        <li className="flex items-center justify-center sans text-xs md:text-sm">
           <BsDot className=" mr-2" />
           Beds {charter?.bed}
         </li>
-        <li className="flex items-center justify-center sans text-xs md:text-base">
+        <li className="flex items-center justify-center sans text-xs md:text-sm">
           <BsDot className=" mr-2" />
           Cabins {charter?.cabin}
         </li>
-        <li className="flex items-center justify-center sans text-xs md:text-base">
+        <li className="flex items-center justify-center sans text-xs md:text-sm">
           <BsDot className=" mr-2" />
           Bathroom: {charter?.bathroom}
         </li>

@@ -1,3 +1,4 @@
+"use client";
 import {
   Select,
   SelectContent,
@@ -9,10 +10,20 @@ import { Slider } from "@/components/ui/slider";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Filters() {
   return (
-    <div className="border rounded-lg shadow-md w-full  bg-[#F6F6F6] border-dotted border-primary ">
+    <motion.div
+      className="border rounded-lg shadow-md w-full  bg-[#F6F6F6] border-dotted border-primary "
+      initial={{ opacity: 0, x: -100 }} // Start from left
+      animate={{ opacity: 1, x: 0 }} // Move to normal position
+      exit={{ opacity: 0, x: 100 }}
+      transition={{
+        opacity: { duration: 0.5 }, // Fade in/out duration
+        x: { type: "spring", stiffness: 100, damping: 25 }, // Smooth movement from left to right
+      }}
+    >
       <h2 className="text-xl font-semibold mb-4 border-b-2 border-b-primary austin text-[40px] py-2 px-6">
         Filters
       </h2>
@@ -114,6 +125,6 @@ export default function Filters() {
           <Search className="w-6 h-8 mr-2" /> Search
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 }

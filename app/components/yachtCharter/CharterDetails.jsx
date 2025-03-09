@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Card from "../yachtCharter/Card";
+import { motion } from "framer-motion";
 
 const CardItems = [
   {
@@ -51,8 +53,23 @@ const CardItems = [
 const CharterDetails = () => {
   return (
     <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-      {CardItems?.map((item) => (
-        <Card key={item.id} charter={item} />
+      {CardItems?.map((item, index) => (
+        <motion.div
+          key={item.id}
+          className=""
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.5,
+            delay: index * 0.2,
+            ease: "easeOut",
+          }}
+        >
+          <Card charter={item} />
+        </motion.div>
       ))}
     </div>
   );
