@@ -1,6 +1,5 @@
 import React from "react";
 import Banner from "../components/common/Banner";
-import CardComponent from "../components/yachtCharter/Card";
 import Filters from "../components/yachtCharter/Filter";
 import CharterDetails from "../components/yachtCharter/CharterDetails";
 
