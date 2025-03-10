@@ -73,7 +73,7 @@ const Navbar = () => {
                 ))}
                 <Link
                   href="/contactus"
-                  className="block md:hidden austin bg-white rounded-full  text-base w-fit px-8 py-3 -ml-1 text-black font-semibold tracking-wide shadow-md hover:bg-primary hover:text-white transition-all duration-300"
+                  className="block md:hidden austin uppercase bg-white rounded-full  text-base w-fit px-8 py-3 -ml-1 text-black font-semibold tracking-wide shadow-md hover:bg-primary hover:text-white transition-all duration-300"
                 >
                   Contact
                 </Link>
@@ -88,7 +88,7 @@ const Navbar = () => {
             <li key={item.id} className="list-none">
               <Link
                 href={item.link}
-                className={`sans text-white font-medium text-lg tracking-wide relative after:transition-all after:duration-300 after:absolute after:w-0 after:top-[-5px] after:left-0 after:bg-white after:h-[1px] hover:after:w-full ${
+                className={`sans uppercase text-white font-medium text-lg tracking-wide relative after:transition-all after:duration-300 after:absolute after:w-0 after:top-[-5px] after:left-0 after:bg-white after:h-[1px] hover:after:w-full ${
                   pathName === item.link
                     ? "after:absolute after:w-full after:top-[-5px] after:left-0 after:bg-white after:h-[1px]"
                     : ""
@@ -103,7 +103,7 @@ const Navbar = () => {
         {/* Contact Button */}
         <Link
           href="/contactus"
-          className="hidden austin lg:inline-block bg-white rounded-full px-6 py-3 text-[#021D45] font-semibold tracking-wide shadow-md hover:bg-primary hover:text-white transition-all duration-300"
+          className="hidden uppercase austin lg:inline-block bg-white rounded-full px-6 py-3 text-[#021D45] font-semibold tracking-wide shadow-md hover:bg-primary hover:text-white transition-all duration-300"
         >
           Contact
         </Link>
