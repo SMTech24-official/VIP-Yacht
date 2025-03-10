@@ -6,7 +6,7 @@ import "swiper/css/effect-coverflow";
 // import "swiper/css/pagination";
 import "swiper/css/navigation"; // Import Navigation styles
 
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import { EffectCoverflow, Navigation } from "swiper/modules";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function App() {
