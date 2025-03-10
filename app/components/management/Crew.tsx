@@ -44,7 +44,7 @@ const crewMembers = [
     name: "Arnold Morris",
     role: "Captain",
     image: "./management_crew3.png",
-    size: "square",
+    size: "full",
   },
 ];
 
