@@ -76,7 +76,7 @@ const SpecialOfferPage = () => {
         Discover exclusive deals below."
       />
       <div className="container px-2 md:px-0">
-        <div className="grid grid-cols-3 gap-6 mb-6 flex-wrap">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mb-6 flex-wrap">
           {offerItem?.map((item, index) => (
             <motion.div
               key={item.id}

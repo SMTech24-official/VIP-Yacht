@@ -8,7 +8,7 @@ import management2 from "../../assets/management2.png";
 // import crew3 from "../../assets/management_crew3.png";
 import sailboatIcon from "../../assets/sailboatIcon.png";
 import { motion } from "framer-motion";
-import Card from "./Card";
+import Card from "./Crew";
 
 const offerItem = [
   {

@@ -221,6 +221,9 @@ body {
   cursor: pointer;
   border-radius: 50%;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Position the buttons only for this slider */
@@ -354,4 +357,7 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+.nav{
+  background-image: url(./assets/management_crew2.png);
 }

@@ -10,7 +10,9 @@ const OfferDetailsBookNow = () => {
       <p className="md:text-base text-sm">
         Get in touch with our team below. Inquire now
       </p>
-      <Btn href="/booknow" btnText="book now" />
+      <div className="bg-primary rounded-full">
+        <Btn href="/booknow" btnText="book now" />
+      </div>
     </div>
   );
 };

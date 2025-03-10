@@ -14,7 +14,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 export default function App() {
   return (
     <>
-      <div className="sliderBook">
+      <div className="sliderBook rounded-[8px] overflow-hidden">
         <Swiper
           navigation={{
             nextEl: ".custom-next",

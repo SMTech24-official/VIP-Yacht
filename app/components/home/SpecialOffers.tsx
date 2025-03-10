@@ -5,7 +5,6 @@ import SpecialOfferCard from "../common/SpecialOfferCard";
 import Btn from "../common/Btn";
 import { motion } from "framer-motion";
 
-
 const offerItem = [
   {
     id: 1,
