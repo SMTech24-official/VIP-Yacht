@@ -17,7 +17,7 @@ export default function App() {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={4}
+        slidesPerView={3}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
