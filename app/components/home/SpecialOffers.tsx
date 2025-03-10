@@ -4,7 +4,7 @@ import Heading from "../common/Heading";
 import SpecialOfferCard from "../common/SpecialOfferCard";
 import Btn from "../common/Btn";
 import { motion } from "framer-motion";
-import Link from "next/link";
+
 
 const offerItem = [
   {
