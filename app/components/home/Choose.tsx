@@ -3,7 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
+// import "swiper/css/pagination";
 import "swiper/css/navigation"; // Import Navigation styles
 
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
@@ -30,7 +30,7 @@ export default function App() {
           nextEl: ".custom-next",
           prevEl: ".custom-prev",
         }}
-        modules={[EffectCoverflow, Pagination, Navigation]} // Include Navigation module
+        modules={[EffectCoverflow, Navigation]} // Include Navigation module
         className="mySwiper"
       >
         <SwiperSlide>
