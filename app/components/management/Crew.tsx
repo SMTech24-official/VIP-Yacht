@@ -50,11 +50,11 @@ const crewMembers = [
 
 const Card = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-y-10  gap-x-6 auto-rows-[minmax(200px,_auto)]">
+    <div className="flex flex-wrap gap-y-10  gap-x-6 ">
       {crewMembers.map((member) => (
         <div
           key={member.id}
-          className={`relative z-10 rounded-[8px] overflow-hidden ${
+          className={`relative z-10 rounded-[8px] overflow-hidden w-[384px] ${
             member.size === "full"
               ? "h-[480x]"
               : member.size === "half"

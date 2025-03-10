@@ -20,7 +20,7 @@ export default function BookingForm() {
 
   if (submitted) {
     return (
-      <div className="mt-10 mb-[60px] md:mb-[120px] w-full max-w-4xl mx-auto bg-white p-8 rounded-md shadow-lg">
+      <div className="mt-10 mb-[60px] md:mb-[120px] w-full max-w-4xl mx-auto bg-white p-8 rounded-md">
         <h2 className="text-center text-[32px] quick_sand font-bold text-fontGray">
           Thank you !
         </h2>
@@ -32,7 +32,7 @@ export default function BookingForm() {
   }
 
   return (
-    <div className="mt-10 mb-[60px] md:mb-[120px] w-full max-w-4xl mx-auto bg-white p-2 md:p-8 rounded-md shadow-lg">
+    <div className="mt-10 mb-[60px] md:mb-[120px] w-full max-w-4xl mx-auto bg-white pt-8 rounded-md ">
       {/* Step Progress Indicator */}
       <div className="relative flex flex-col items-center">
         {/* Progress Line */}
@@ -64,7 +64,7 @@ export default function BookingForm() {
         <Tab.Panels>
           <Tab.Panel>
             {/* Step 1: Contact Information */}
-            <div className="space-y-4 mt-10">
+            <div className="space-y-4 mt-12">
               <label className="block text-primary nunito font-medium text-base md:text-xl">
                 Name*
               </label>
@@ -111,7 +111,7 @@ export default function BookingForm() {
 
           <Tab.Panel>
             {/* Step 2: About Your Trip */}
-            <div className="space-y-4 mt-10">
+            <div className="space-y-4 mt-12">
               <div className="grid md:grid-cols-2 gap-4 md:gap-1">
                 <div className="flex flex-col gap-4">
                   <label className="block text-primary nunito font-medium text-base md:text-xl">
@@ -185,7 +185,7 @@ export default function BookingForm() {
 
           <Tab.Panel>
             {/* Step 3: Request Confirmation */}
-            <div className="space-y-4 mt-10">
+            <div className="space-y-4 mt-12">
               <label className="block text-primary nunito font-medium text-base md:text-xl">
                 You prefer to be Contacted by*
               </label>
