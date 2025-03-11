@@ -3,6 +3,7 @@ import { Tab } from "@headlessui/react";
 import { useState } from "react";
 import { BsFillSendFill } from "react-icons/bs";
 import { IoIosArrowForward } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const steps = [
   "Contact Information",
@@ -20,14 +21,19 @@ export default function BookingForm() {
 
   if (submitted) {
     return (
-      <div className="mt-10 mb-[60px] md:mb-[120px] w-full max-w-4xl mx-auto bg-white p-8 rounded-md">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        className="mt-10 mb-[60px] md:mb-[120px] w-full max-w-4xl mx-auto bg-white p-8 rounded-md"
+      >
         <h2 className="text-center text-[32px] quick_sand font-bold text-fontGray">
           Thank you !
         </h2>
         <p className="text-center nunito font-medium text-lg text-primary mt-6">
           Thank you for your interest. Our team will contact you shortly.
         </p>
-      </div>
+      </motion.div>
     );
   }
 
@@ -64,7 +70,12 @@ export default function BookingForm() {
         <Tab.Panels>
           <Tab.Panel>
             {/* Step 1: Contact Information */}
-            <div className="space-y-4 mt-12">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="space-y-4 mt-12"
+            >
               <label className="block text-primary nunito font-medium text-base md:text-xl">
                 Name*
               </label>
@@ -106,12 +117,17 @@ export default function BookingForm() {
                 details will be kept confidential and will not be shared with
                 any third parties.
               </p>
-            </div>
+            </motion.div>
           </Tab.Panel>
 
           <Tab.Panel>
             {/* Step 2: About Your Trip */}
-            <div className="space-y-4 mt-12">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="space-y-4 mt-12"
+            >
               <div className="grid md:grid-cols-2 gap-4 md:gap-1">
                 <div className="flex flex-col gap-4">
                   <label className="block text-primary nunito font-medium text-base md:text-xl">
@@ -180,12 +196,17 @@ export default function BookingForm() {
                   No
                 </label>
               </div>
-            </div>
+            </motion.div>
           </Tab.Panel>
 
           <Tab.Panel>
             {/* Step 3: Request Confirmation */}
-            <div className="space-y-4 mt-12">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="space-y-4 mt-12"
+            >
               <label className="block text-primary nunito font-medium text-base md:text-xl">
                 You prefer to be Contacted by*
               </label>
@@ -221,7 +242,7 @@ export default function BookingForm() {
                 className="nunito w-full p-2 border rounded-md  placeholder:text-primary text-primary py-4 px-5 border-primary outline-none focus:ring-2 focus:ring-primary"
                 placeholder="Any additional comments?"
               ></textarea>
-            </div>
+            </motion.div>
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>

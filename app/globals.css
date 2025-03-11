@@ -358,6 +358,6 @@ body {
     @apply bg-background text-foreground;
   }
 }
-.nav{
-  background-image: url(./assets/management_crew2.png);
+.nav {
+  background-image: url(./assets/management_crew1.png);
 }

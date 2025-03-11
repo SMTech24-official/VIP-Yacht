@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <header className="py-4 bg-gradient-to-r from-[#264463] to-[#021D45] shadow-lg relative z-[1000]">
-      <div className="container mx-auto flex items-center justify-between px-2 md:px-0">
+      <div className="container mx-auto flex items-center justify-between px-2 lg:px-0">
         {/* Logo */}
         <Link href="/" className="flex items-center flex-shrink-0">
           <Image
@@ -73,7 +73,7 @@ const Navbar = () => {
                 ))}
                 <Link
                   href="/contactus"
-                  className="block md:hidden austin uppercase bg-white rounded-full  text-base w-fit px-8 py-3 -ml-1 text-black font-semibold tracking-wide shadow-md hover:bg-primary hover:text-white transition-all duration-300"
+                  className="block lg:hidden austin uppercase bg-white rounded-full  text-base w-fit px-8 py-3 -ml-1 text-black font-semibold tracking-wide shadow-md hover:bg-primary hover:text-white transition-all duration-300"
                 >
                   Contact
                 </Link>

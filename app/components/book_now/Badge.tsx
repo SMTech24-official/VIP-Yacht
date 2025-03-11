@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const listItem = [
   { id: 1, label: "cabins", amount: 5 },
@@ -8,7 +10,12 @@ const listItem = [
 
 const Badge = () => {
   return (
-    <div className="pt-6 container flex items-center justify-center">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="pt-6 container flex items-center justify-center"
+    >
       <ul className="flex gap-20">
         {listItem.map((item, index) => (
           <li
@@ -28,7 +35,7 @@ const Badge = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 };
 

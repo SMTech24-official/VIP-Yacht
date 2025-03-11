@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 // import crew1 from "../../assets/management_crew1.png";
 // import crew2 from "../../assets/management_crew2.png";
 // import crew3 from "../../assets/management_crew3.png";
@@ -52,7 +53,10 @@ const Card = () => {
   return (
     <div className="flex flex-wrap gap-y-10  gap-x-6 ">
       {crewMembers.map((member) => (
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
           key={member.id}
           className={`relative z-10 rounded-[8px] overflow-hidden w-[384px] ${
             member.size === "full"
@@ -62,10 +66,13 @@ const Card = () => {
               : "h-[325px]"
           }`}
         >
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
             className="overlay w-full h-full absolute left-0 top-0 bg-no-repeat bg-cover bg-top -z-10"
             style={{ backgroundImage: `url(${member.image})` }}
-          ></div>
+          ></motion.div>
           <div className="absolute left-5 bottom-5">
             <h3 className="quick_sand font-bold text-xl mb-2 text-white capitalize">
               {member.name}
@@ -74,7 +81,7 @@ const Card = () => {
               {member.role}
             </h4>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

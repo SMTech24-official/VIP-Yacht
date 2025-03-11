@@ -10,11 +10,17 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper/modules";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { motion } from "framer-motion";
 
 export default function App() {
   return (
     <>
-      <div className="sliderBook rounded-[8px] overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="sliderBook rounded-[8px] overflow-hidden"
+      >
         <Swiper
           navigation={{
             nextEl: ".custom-next",
@@ -42,7 +48,7 @@ export default function App() {
         <button className="custom-next">
           <IoIosArrowForward />
         </button>
-      </div>
+      </motion.div>
     </>
   );
 }

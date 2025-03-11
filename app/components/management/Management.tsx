@@ -8,7 +8,7 @@ import management2 from "../../assets/management2.png";
 // import crew3 from "../../assets/management_crew3.png";
 import sailboatIcon from "../../assets/sailboatIcon.png";
 import { motion } from "framer-motion";
-import Card from "./Crew";
+import Card from "./Crew2";
 
 const offerItem = [
   {
@@ -105,6 +105,7 @@ const Management = () => {
           Meet Our Proffesional Crew
         </h2>
       </motion.div>
+      {/* crew */}
       <Card />
       {/* what we offer */}
       <motion.div
