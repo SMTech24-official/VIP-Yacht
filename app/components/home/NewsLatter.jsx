@@ -19,7 +19,7 @@ const NewsLatter = () => {
               placeholder="Enter Your email address"
               className="placeholder:text-gray-400 text-black border-none outline-none  bg-transparent"
             />
-            <button className="bg-secondary md:py-[14px] py-3 px-4 md:px-7 austin font-normal rounded-4xl text-white cursor-pointer md:text-base text-sm">
+            <button className="bg-secondary md:py-[14px] py-3 px-4 md:px-7 austin font-normal rounded-4xl text-white cursor-pointer md:text-base text-xs">
               GET IN TOUCH
             </button>
           </div>

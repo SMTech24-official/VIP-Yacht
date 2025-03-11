@@ -5,7 +5,7 @@ import BannerDropdown from "../home/BannerDropdown";
 
 const Banner = () => {
   return (
-    <div className=" w-full bg-[url(./assets/banner.png)] bg-no-repeat bg-center bg-cover pt-[121px] pb-[320px] text-white relative">
+    <div className="w-full bg-[url(./assets/banner.png)] bg-no-repeat bg-center bg-cover pt-[150px] md:pt-[221px] pb-[320px] text-white relative">
       <div className="container md:px-0 px-2 flex items-center justify-center flex-col relative z-10">
         {/* banner */}
         <h1 className="md:max-w-[990px] text-center text-3xl md:text-5xl font-medium leading-[140%] md:leading-[120%] uppercase austin ">
@@ -19,7 +19,7 @@ const Banner = () => {
         <Btn href="/contactus" btnText="Get in Touch" />
       </div>
       {/* choose option */}
-      <div className="absolute  left-1/2 -translate-x-1/2 md:top-[89%] top-[80%] container z-20">
+      <div className="absolute  left-1/2 -translate-x-1/2 md:top-[90%] top-[80%] container z-20">
         <BannerDropdown />
       </div>
 
