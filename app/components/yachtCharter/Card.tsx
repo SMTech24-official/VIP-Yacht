@@ -1,7 +1,6 @@
 "use client";
 // import { Image } from "antd";
 import React from "react";
-import img from "../../assets/yacht1.png";
 import Image from "next/image";
 import { Card, Rating } from "@mui/material";
 import { FaLocationDot } from "react-icons/fa6";
@@ -13,6 +12,7 @@ interface Charter {
   location: string;
   detail: string;
   title: string;
+  image: string;
   guest: number;
   bed: number;
   cabin: number;
@@ -25,7 +25,7 @@ const CardComponent = ({ charter }: { charter: Charter }) => {
     <Card className="md:max-w-[384px] w-full rounded-lg overflow-hidden h-[630px]  border border-[#85848464]">
       <div className="w-full h-[350px]">
         <Image
-          src={img}
+          src={charter?.image}
           alt=""
           height={500}
           width={500}

@@ -3,12 +3,16 @@ import React from "react";
 import Card from "../yachtCharter/Card";
 import { motion } from "framer-motion";
 import Pagination from "../common/Pagination";
+import img1 from "../../assets/yacht1.png";
+import img2 from "../../assets/yacht3.png";
+import img3 from "../../assets/yacht2.png";
 
 const CardItems = [
   {
     id: 1,
     location: "Crystal Voyages",
     title: "Blue Horizon",
+    image: img1,
     guest: 8,
     bed: 8,
     cabin: 5,
@@ -20,6 +24,7 @@ const CardItems = [
     id: 2,
     location: "Crystal Voyages",
     title: "Blue Horizon",
+    image: img2,
     guest: 8,
     bed: 8,
     cabin: 5,
@@ -31,6 +36,7 @@ const CardItems = [
     id: 3,
     location: "Crystal Voyages",
     title: "Blue Horizon",
+    image: img3,
     guest: 8,
     bed: 8,
     cabin: 5,
@@ -42,6 +48,31 @@ const CardItems = [
     id: 4,
     location: "Crystal Voyages",
     title: "Blue Horizon",
+    image: img1,
+    guest: 8,
+    bed: 8,
+    cabin: 5,
+    bathroom: 3,
+    details:
+      "A luxurious yacht offering elegance, comfort, and adventure on the open sea.",
+  },
+  {
+    id: 5,
+    location: "Crystal Voyages",
+    title: "Blue Horizon",
+    image: img2,
+    guest: 8,
+    bed: 8,
+    cabin: 5,
+    bathroom: 3,
+    details:
+      "A luxurious yacht offering elegance, comfort, and adventure on the open sea.",
+  },
+  {
+    id: 6,
+    location: "Crystal Voyages",
+    title: "Blue Horizon",
+    image: img3,
     guest: 8,
     bed: 8,
     cabin: 5,
