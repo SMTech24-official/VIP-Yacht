@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Card from "../yachtCharter/Card";
 import { motion } from "framer-motion";
 import Pagination from "../common/Pagination";
@@ -83,10 +83,27 @@ const CardItems = [
 ];
 
 const CharterDetails = () => {
+  const itemsPerPage = 8; // Number of items to show per page
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(CardItems.length / itemsPerPage);
+
+  // Get the items for the current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentItems = CardItems.slice(startIndex, startIndex + itemsPerPage);
+
+  // Handle page change
+  const handlePageChange = (page) => {
+    if (page > 0 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
+
   return (
-    <div className="">
+    <div>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-        {CardItems?.map((item, index) => (
+        {currentItems.map((item, index) => (
           <motion.div
             key={item.id}
             className=""
@@ -105,8 +122,14 @@ const CharterDetails = () => {
           </motion.div>
         ))}
       </div>
-      <div className="mt-10 float-end">
-        <Pagination totalPages={5} />
+
+      {/* Pagination Component */}
+      <div className="float-end mt-10">
+        <Pagination
+          totalPages={totalPages}
+          currentPage={currentPage}
+          handlePageChange={handlePageChange}
+        />
       </div>
     </div>
   );

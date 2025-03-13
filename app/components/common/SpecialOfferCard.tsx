@@ -26,7 +26,7 @@ const SpecialOfferCard: React.FC<SpecialOfferCardProps> = ({
   return (
     <div>
       <Link
-        href="/offerdetails"
+        href="/specialoffer/id"
         className="max-w-[384px] h-[350px] rounded-lg overflow-hidden relative z-10 cursor-pointer group"
       >
         <div className="overlay w-full rounded-lg opacity-0 h-full bg-[#0000006e] absolute left-0 top-0 group-hover:opacity-100 duration-300 transition-all"></div>

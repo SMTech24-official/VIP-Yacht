@@ -65,7 +65,7 @@ export default function Filters() {
             min={10}
             max={150}
             step={1}
-            className="py-3 "
+            className="py-2 "
           />
           <div className="flex justify-between items-center gap-2 mb-2 ">
             <Input
@@ -105,7 +105,7 @@ export default function Filters() {
             min={10000}
             max={2000000}
             step={1000}
-            className="my-2"
+            className="py-2"
           />
           <div className="flex justify-between items-center gap-2">
             <Input
@@ -121,7 +121,7 @@ export default function Filters() {
         </div>
 
         {/* Search Button */}
-        <Button className="w-full mt-4 text-white py-6 flex items-center justify-center">
+        <Button className="w-full mt-4 text-white py-6 flex items-center justify-center cursor-pointer">
           <Search className="w-6 h-8 mr-2" /> Search
         </Button>
       </div>

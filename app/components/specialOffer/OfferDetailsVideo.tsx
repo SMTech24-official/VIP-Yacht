@@ -15,7 +15,7 @@ const OfferDetailsVideo = () => {
         className="my-20"
       >
         <video width="800" className="w-full h-full rounded-[8px]" controls>
-          <source src="./about.mp4" type="video/mp4" />
+          <source src="/about.mp4" type="video/mp4" />
           <p>Your browser does not support the video tag.</p>
         </video>
       </motion.div>

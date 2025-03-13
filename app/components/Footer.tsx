@@ -8,27 +8,27 @@ const itemsQuick = [
   {
     id: 1,
     name: "Yacht Charter",
-    link: "/",
+    link: "/yachtcharter",
   },
   {
     id: 2,
     name: "Special Offer",
-    link: "/",
+    link: "/specialoffer",
   },
   {
     id: 3,
     name: "About us",
-    link: "/",
+    link: "/aboutus",
   },
   {
     id: 4,
     name: "Management",
-    link: "/",
+    link: "/management",
   },
   {
     id: 5,
     name: "Destination",
-    link: "/",
+    link: "/destinationdetails",
   },
 ];
 

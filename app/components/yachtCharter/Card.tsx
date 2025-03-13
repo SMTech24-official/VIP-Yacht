@@ -63,7 +63,10 @@ const CardComponent = ({ charter }: { charter: Charter }) => {
         </li>
       </ul>
       <p className="sans text-sm px-5 py-5">{charter?.detail}</p>
-      <Link href="" className="austin text-sm font-bold px-5 underline mb-5">
+      <Link
+        href="yachtcharter/id"
+        className="austin text-sm font-bold px-5 underline mb-5"
+      >
         Details
       </Link>
     </Card>
