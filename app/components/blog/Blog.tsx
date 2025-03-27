@@ -3,6 +3,7 @@ import React from "react";
 import BlogCard from "../common/BlogCard";
 import blog1 from "../../assets/blog1.png";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const blogItem = [
   {
@@ -50,21 +51,22 @@ const Blog = () => {
     <div className="container py-[60px] md:py-[120px] px-2 md:px-0 flex flex-col md:items-center justify-center">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 ">
         {blogItem.map((item, index) => (
-          <motion.div
-            key={item.id}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 0.5,
-              delay: index * 0.2,
-              ease: "easeOut",
-            }}
-          >
-            <BlogCard key={item.id} blog={item} />
-          </motion.div>
+          <Link key={item.id} href={`/blog/${item.id}`}>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.2,
+                ease: "easeOut",
+              }}
+            >
+              <BlogCard key={item.id} blog={item} />
+            </motion.div>
+          </Link>
         ))}
       </div>
     </div>
