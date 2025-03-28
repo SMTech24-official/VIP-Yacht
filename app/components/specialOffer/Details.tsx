@@ -2,8 +2,8 @@
 import React from "react";
 import { Tabs } from "antd";
 import type { TabsProps } from "antd";
-import Overview from "../specialOffer/Overview";
-import Features from "../specialOffer/Features";
+import Overview from "./Overview";
+import Features from "./Features";
 import Amenities from "./Amenities";
 
 const onChange = (key: string) => {

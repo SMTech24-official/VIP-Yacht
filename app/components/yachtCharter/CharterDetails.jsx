@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Card from "../yachtCharter/Card";
+import Card from "./Card";
 import { motion } from "framer-motion";
 import Pagination from "../common/Pagination";
 import img1 from "../../assets/yacht1.png";

@@ -1,5 +1,5 @@
 import React from "react";
-import FeatureUI from "../specialOffer/FeatureUI";
+import FeatureUI from "./FeatureUI";
 import OfferDetailsBookNow from "./OfferDetailsBookNow";
 const Features = () => {
   return (

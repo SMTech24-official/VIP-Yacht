@@ -9,7 +9,7 @@ import "swiper/css/navigation"; // Import Navigation styles
 import { EffectCoverflow, Navigation } from "swiper/modules";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-export default function App() {
+function Chose() {
   return (
     <div className="relative">
       {/* Swiper Component */}
@@ -64,3 +64,5 @@ export default function App() {
     </div>
   );
 }
+
+export default Chose;

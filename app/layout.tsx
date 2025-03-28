@@ -7,10 +7,9 @@ import {
   Quicksand,
 } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-// import Footer from "./components/Footer";
 import localFont from "next/font/local";
-import Footer from "./components/Footer";
+import { ReduxProvider } from "@/redux/reduxProvider/ReduxProvider";
+import { Toaster } from "sonner";
 
 // Local font (Unchanged)
 const austinCyr = localFont({
@@ -62,9 +61,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${austinCyr.variable} ${nunito.variable} ${poppins.variable} ${quicksand.variable} antialiased overflow-x-hidden`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <ReduxProvider>
+          <Toaster position="top-center" />
+          {children}
+        </ReduxProvider>
       </body>
     </html>
   );
