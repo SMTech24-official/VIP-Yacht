@@ -1,10 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useCreteSpecialMutation } from "@/redux/service/own/special/specialApi";
 import { TYatch } from "@/types/yatch";
+import ApiErrorHandler from "@/utils/ApiErrorHandler";
 import getHeroImageUrl from "@/utils/getImageHeroUrl";
 import { Button, Card, Form, InputNumber, Modal } from "antd";
 import Image from "next/image";
 import React, { FC, useState } from "react";
+import { toast } from "sonner";
 
 const YatchCard: FC<TYatch> = ({
   name,
@@ -23,20 +25,25 @@ const YatchCard: FC<TYatch> = ({
   const onFinish = async (values: any) => {
     try {
       const res = await createSpecial({
-        regularPrice: parseInt(values.regularPrice),
-        sellPrice: parseInt(values.sellPrice),
+        regularPrice: Number(values.regularPrice), // Convert to number
+        sellPrice: Number(values.sellPrice), // Convert to number
         uri,
         name,
-        length,
+        length: Number(length), // Convert to number
         hero,
         make,
-        cabins,
-        sleeps,
+        cabins: Number(cabins), // Convert to number
+        sleeps: Number(sleeps), // Convert to number
       }).unwrap();
 
-      console.log(res);
+      if (res.success) {
+        setIsOpen(false);
+        toast.success(res.message);
+      } else {
+        toast.error(res.message);
+      }
     } catch (error) {
-      console.error("Error creating special:", error);
+      ApiErrorHandler(error);
     }
   };
   return (

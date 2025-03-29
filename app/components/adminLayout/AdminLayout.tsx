@@ -12,12 +12,18 @@ import {
   HiMenuAlt2,
 } from "react-icons/hi";
 import { UserAvatarDropdown } from "../userAvatar/UserAvatarDropdown";
+import { MdOutlineFolderSpecial } from "react-icons/md";
 
 const menuItems = [
   {
     label: "Dashboard",
     href: "/admin",
     icon: HiHome,
+  },
+  {
+    label: "Special",
+    href: "/admin/special",
+    icon: MdOutlineFolderSpecial,
   },
   {
     label: "Contacts",
@@ -34,7 +40,7 @@ const menuItems = [
       },
       {
         label: "Add New Blog",
-        href: "/admin/blogs/add-blog",
+        href: "/admin/blog/add-blog",
       },
     ],
   },
@@ -53,7 +59,7 @@ const menuItems = [
       },
       {
         label: "Add Destination",
-        href: "/admin/add-destination",
+        href: "/admin/destination/add-destination",
       },
     ],
   },
