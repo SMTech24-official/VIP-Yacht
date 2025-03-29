@@ -8,8 +8,14 @@ import "swiper/css/navigation"; // Import Navigation styles
 
 import { EffectCoverflow, Navigation } from "swiper/modules";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { useGetAllDestinationsQuery } from "@/redux/service/own/destination/destinationApi";
+import Image from "next/image";
+import { Skeleton } from "antd";
+import Link from "next/link";
 
 function Chose() {
+  const { data, isLoading } = useGetAllDestinationsQuery([]);
+  console.log(data);
   return (
     <div className="relative">
       {/* Swiper Component */}
@@ -33,27 +39,31 @@ function Chose() {
         modules={[EffectCoverflow, Navigation]} // Include Navigation module
         className="mySwiper"
       >
-        <SwiperSlide>
-          <img src="/choose.png" alt="Slide 1" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/choose.png" alt="Slide 2" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/choose.png" alt="Slide 3" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/choose.png" alt="Slide 4" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/choose.png" alt="Slide 5" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/choose.png" alt="Slide 6" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="/choose.png" alt="Slide 7" />
-        </SwiperSlide>
+        {isLoading
+          ? new Array(5).fill(null).map((_, item) => (
+              <SwiperSlide key={item}>
+                <Skeleton active title paragraph />
+              </SwiperSlide>
+            ))
+          : data?.data?.map((item) => (
+              <SwiperSlide key={item.id}>
+                <Link
+                  className="flex relative"
+                  href={`/destination/${item.id}`}
+                >
+                  <Image
+                    src={item.banner || ""}
+                    height={600}
+                    width={250}
+                    alt="Slide 1"
+                    className="w-full h-[617px]"
+                  />
+                  <div className="absolute bottom-5 w-full flex justify-center items-center z-10">
+                    <h2 className="text-2xl font-bold">{item.title}</h2>
+                  </div>
+                </Link>
+              </SwiperSlide>
+            ))}
       </Swiper>
       <button className="custom-prev flex items-center justify-center">
         <IoIosArrowBack />

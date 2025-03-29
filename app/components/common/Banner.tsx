@@ -1,11 +1,18 @@
 import React from "react";
+
 interface BannerProps {
   className: string;
   title: string;
   details: string;
+ 
 }
 
-const Banner: React.FC<BannerProps> = ({ className, title, details }) => {
+const Banner: React.FC<BannerProps> = ({
+  className,
+  title,
+  details,
+
+}) => {
   return (
     <div
       className={`relative  z-10 h-[460px] md:h-[560px] bg-[url(./assets/specialOfferBg.png)] bg-no-repeat bg-cover bg-center flex flex-col items-center justify-center gap-6 text-white ${className}`}

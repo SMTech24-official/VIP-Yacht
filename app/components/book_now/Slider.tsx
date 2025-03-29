@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function App() {
   return (
@@ -30,16 +31,16 @@ export default function App() {
           className="slider"
         >
           <SwiperSlide>
-            <img src="/bookNow.png" className="" />
+            <Image alt="image" src="/bookNow.png" className="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/blog1.png" className="" />
+            <Image alt="image" src="/blog1.png" className="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/bookNow.png" className="" />
+            <Image alt="image" src="/bookNow.png" className="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="/details2.png" className="" />
+            <Image alt="image" src="/details2.png" className="" />
           </SwiperSlide>
         </Swiper>
         <button className="custom-prev">

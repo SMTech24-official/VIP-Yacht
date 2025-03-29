@@ -1,74 +1,78 @@
 "use client";
-// import { Image } from "antd";
 import React from "react";
 import Image from "next/image";
 import { Card, Rating } from "@mui/material";
-import { FaLocationDot } from "react-icons/fa6";
 import { BsDot } from "react-icons/bs";
 import Link from "next/link";
-// import { Card } from "antd";
+import getHeroImageUrl from "@/utils/getImageHeroUrl";
 
-interface Charter {
-  location: string;
-  detail: string;
-  title: string;
-  image: string;
-  guest: number;
-  bed: number;
-  cabin: number;
-  bathroom: number;
-  // Add other properties of the charter object here
+// Define the type for the yacht data
+interface Yacht {
+  uri: string;
+  hero: string;
+  name: string;
+  length: string;
+  cabins: string;
+  sleeps: string;
+  builtYear: string;
+  make: string;
 }
 
-const CardComponent = ({ charter }: { charter: Charter }) => {
+const CardComponent = ({ charter }: { charter: Yacht }) => {
   return (
-    <Card className="md:max-w-[384px] w-full rounded-lg overflow-hidden h-[630px]  border border-[#85848464]">
-      <div className="w-full h-[350px]">
+    <Card className="md:max-w-[384px] w-full rounded-lg overflow-hidden border border-[#85848464] shadow-md transition-transform ">
+      {/* Image Section */}
+      <div className="w-full h-[250px] relative">
         <Image
-          src={charter?.image}
-          alt=""
-          height={500}
-          width={500}
-          className="w-full h-full object-cover"
+          src={`https://api.ankor.io${getHeroImageUrl(
+            charter.hero || "",
+            "320w"
+          )}`}
+          alt={charter.name}
+          fill
+          className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
-      <div className="px-5 mt-4 mb-8 ">
-        <div className="flex justify-between">
-          <h3 className="text-secondary austin font-medium  flex items-center gap-1">
-            {" "}
-            <FaLocationDot />
-            {charter?.location}
-          </h3>
-          <Rating name="read-only" value={3.5} readOnly /> {/* Rating */}
+
+      {/* Content Section */}
+      <div className="p-5 space-y-4">
+        {/* Title and Rating */}
+        <div className="flex justify-between items-center">
+          <h2 className="austin font-medium text-lg uppercase">
+            {charter?.name}
+          </h2>
+          <Rating name="read-only" value={3.5} readOnly />
         </div>
-        <h2 className="austin font-medium text-lg uppercase">
-          {charter?.title}
-        </h2>
+
+        {/* Specifications List */}
+        <ul className="flex flex-wrap gap-2 text-sm">
+          <li className="flex items-center">Length: {charter?.length}m</li>
+          <li className="flex items-center">
+            <BsDot className="mr-1" />
+            Sleeps: {charter?.sleeps}
+          </li>
+          <li className="flex items-center">
+            <BsDot className="mr-1" />
+            Cabins: {charter?.cabins}
+          </li>
+          <li className="flex items-center">
+            <BsDot className="mr-1" />
+            Make: {charter?.make}
+          </li>
+        </ul>
+
+        {/* Built Year */}
+        <p className="text-gray-600 text-sm">Built in {charter?.builtYear}</p>
+
+        {/* Details Link */}
+        <Link
+          href={`yachtcharter/${charter?.uri}`}
+          className="block austin text-sm font-bold underline text-primary hover:text-primary-dark transition-colors"
+        >
+          View Details
+        </Link>
       </div>
-      <ul className="flex gap-2 flex-wrap py-5 border border-[#6060603d] px-5 ">
-        <li className="flex items-center justify-center text-xs md:text-base">
-          Guest {charter?.guest}
-        </li>
-        <li className="flex items-center justify-center sans text-xs md:text-sm">
-          <BsDot className=" mr-2" />
-          Beds {charter?.bed}
-        </li>
-        <li className="flex items-center justify-center sans text-xs md:text-sm">
-          <BsDot className=" mr-2" />
-          Cabins {charter?.cabin}
-        </li>
-        <li className="flex items-center justify-center sans text-xs md:text-sm">
-          <BsDot className=" mr-2" />
-          Bathroom: {charter?.bathroom}
-        </li>
-      </ul>
-      <p className="sans text-sm px-5 py-5">{charter?.detail}</p>
-      <Link
-        href="yachtcharter/id"
-        className="austin text-sm font-bold px-5 underline mb-5"
-      >
-        Details
-      </Link>
     </Card>
   );
 };

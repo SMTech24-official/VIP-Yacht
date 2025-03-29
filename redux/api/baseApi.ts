@@ -5,7 +5,7 @@ import type { RootState } from "../store"; // Import RootState
 export const baseApi = createApi({
   reducerPath: "baseApi", // Unique key for the API slice
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3001/api/v1", // Replace with your API base URL
+    baseUrl: "https://cruize.code-commando.com/api/v1", // Replace with your API base URL
     prepareHeaders: (headers, { getState }) => {
       // Get the token from the auth slice in the Redux store
       const state = getState() as RootState;

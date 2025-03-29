@@ -1,7 +1,7 @@
 import Banner from "@/app/components/common/Banner";
+import CharterDetails from "@/app/components/yachtCharter/CharterDetails";
 import Filters from "@/app/components/yachtCharter/Filter";
 import React from "react";
-import CharterDetails from "@/app/components/yachtCharter/CharterDetails";
 
 const page = () => {
   return (

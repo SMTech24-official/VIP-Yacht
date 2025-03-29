@@ -1,9 +1,22 @@
 "use client";
-import React from "react";
+import React, { FC } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import blogImg from "../../assets/blogDetails.png";
-const BlogDetails = () => {
+// import blogImg from "../../assets/blogDetails.png";
+import dayjs from "dayjs";
+
+interface BlogDetailsProps {
+  image: string;
+  content: string;
+  createdAt: string;
+  title: string;
+}
+const BlogDetails: FC<BlogDetailsProps> = ({
+  image,
+  content,
+  createdAt,
+  title,
+}) => {
   return (
     <div className="container px-2 md:px-0">
       <motion.div
@@ -13,11 +26,13 @@ const BlogDetails = () => {
         className="mt-20 flex flex-col gap-6"
       >
         <h2 className="font-medium austin text-3xl md:text-[32px] leading-[150%] mb-4">
-          Welcome to the British Virgin Islands: A Yacht Charter Paradise 
+          {title}
         </h2>
-        <span className="md:text-base text-sm">19.06.2024</span>
-        <Image src={blogImg} alt="Blog" />
-        <p className="sans leading-[160%] text-[#606060] ">
+        <span className="md:text-base text-sm">
+          {dayjs(createdAt).format("YYYY MM DD")}
+        </span>
+        <Image height={400} width={1200} src={image} alt="Blog" />
+        {/* <p className="sans leading-[160%] text-[#606060] ">
           The British Virgin Islands (BVI) stand as a beacon for those looking
           to charter a yacht and experience the ultimate in travel flexibility.
           With over 50 islands to explore, the BVI offers a unique blend of
@@ -29,9 +44,13 @@ const BlogDetails = () => {
           dive into the benefits of yacht charters in the BVI, you&apos;ll
           discover why this mode of travel is increasingly popular among global
           travelers. 
-        </p>
+        </p> */}
+        <div
+          className="mb-10"
+          dangerouslySetInnerHTML={{ __html: content }}
+        ></div>
       </motion.div>
-      <div className="mt-10 text-justify md:text-left">
+      {/* <div className="mt-10 text-justify md:text-left">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -295,7 +314,7 @@ const BlogDetails = () => {
             touch with Boon Yachts team to start planning your dream holiday!
           </p>
         </motion.div>
-      </div>
+      </div> */}
     </div>
   );
 };

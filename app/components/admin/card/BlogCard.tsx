@@ -8,12 +8,14 @@ import { FC } from "react";
 import { toast } from "sonner";
 import dayjs from "dayjs";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 // Define a default placeholder image URL
 const DEFAULT_IMAGE_URL = "/placeholder-image.jpg"; // Replace with your placeholder image path
 
 const BlogCard: FC<TBlog> = ({ title, image, id, createdAt }) => {
   const [deleteBlog, { isLoading }] = useDeleteBlogMutation();
+  const router = useRouter();
 
   const handleDelete = async (id: string) => {
     try {
@@ -26,6 +28,10 @@ const BlogCard: FC<TBlog> = ({ title, image, id, createdAt }) => {
     } catch (error) {
       ApiErrorHandler(error);
     }
+  };
+
+  const handleClick = () => {
+    router.push(`/blog/${id}`);
   };
 
   // Construct the src URL safely
@@ -49,6 +55,9 @@ const BlogCard: FC<TBlog> = ({ title, image, id, createdAt }) => {
           danger
         >
           Delete
+        </Button>,
+        <Button key={"view"} onClick={handleClick}>
+          View
         </Button>,
       ]}
       cover={
