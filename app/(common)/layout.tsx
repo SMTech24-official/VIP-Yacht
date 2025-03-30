@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar />
       {children}
       <Footer />
