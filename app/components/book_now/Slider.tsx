@@ -31,16 +31,40 @@ export default function App() {
           className="slider"
         >
           <SwiperSlide>
-            <Image alt="image" src="/bookNow.png" className="" />
+            <Image
+              width={400}
+              height={250}
+              alt="image"
+              src="/bookNow.png"
+              className=""
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Image alt="image" src="/blog1.png" className="" />
+            <Image
+              width={400}
+              height={250}
+              alt="image"
+              src="/blog1.png"
+              className=""
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Image alt="image" src="/bookNow.png" className="" />
+            <Image
+              width={400}
+              height={250}
+              alt="image"
+              src="/bookNow.png"
+              className=""
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <Image alt="image" src="/details2.png" className="" />
+            <Image
+              width={400}
+              height={250}
+              alt="image"
+              src="/details2.png"
+              className=""
+            />
           </SwiperSlide>
         </Swiper>
         <button className="custom-prev">

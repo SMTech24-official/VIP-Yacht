@@ -37,8 +37,9 @@ const authApi = baseApi.injectEndpoints({
         url: "/ankor/accessToken", // Replace with your actual Ankor access token endpoint
         method: "GET",
       }),
-      providesTags: ["auth"],
+      providesTags: ["ankor"],
     }),
+    
   }),
 });
 

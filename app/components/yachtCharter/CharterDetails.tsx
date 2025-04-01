@@ -5,6 +5,7 @@ import CardComponent from "./Card"; // Import your CardComponent
 import { Pagination } from "antd"; // Import Ant Design Pagination
 import { useGetAllYatchQuery } from "@/redux/service/ankor/extranalApi";
 import { useSearchParams } from "next/navigation";
+import Loading from "../loading/Loading";
 
 const CharterDetails = () => {
   const itemsPerPage = 8; // Number of items to show per page
@@ -52,7 +53,11 @@ const CharterDetails = () => {
   };
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex min-h-[500px]  items-center justify-center">
+        <Loading />
+      </div>
+    );
   }
 
   return (

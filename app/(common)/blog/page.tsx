@@ -1,5 +1,5 @@
-import Blog from "@/app/components/blog/Blog";
 import Banner from "@/app/components/common/Banner";
+import Blog from "@/app/components/home/Blog";
 import React from "react";
 
 const page = () => {
