@@ -14,11 +14,6 @@ const BookNow = () => {
   const uri = searchTerm.get("uri");
   const { data, isLoading } = useGetYachtByIdQuery(uri || "");
 
-  // Log the decoded URI for debugging
-  if (uri) {
-    console.log("Decoded URI:", decodeURIComponent(uri));
-  }
-
   // Handle cases where URI is missing
   if (!uri) {
     return (
