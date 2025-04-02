@@ -5,7 +5,7 @@ import { GoDotFill } from "react-icons/go";
 import OfferDetailsBookNow from "./OfferDetailsBookNow";
 import { motion } from "framer-motion";
 
-const Overview = ({ description, architect, interiorDesigner }) => {
+const Overview = ({ description, architect, interiorDesigner, uri }) => {
   return (
     <div className="mt-10 mb-[60px] md:mb-[120px]">
       <div className="flex md:flex-row flex-col gap-6 mb-[60px] md:mb-[120px]">
@@ -46,7 +46,7 @@ const Overview = ({ description, architect, interiorDesigner }) => {
           </p>
         </div> */}
       </div>
-      <OfferDetailsBookNow />
+      <OfferDetailsBookNow uri={uri} />
     </div>
   );
 };

@@ -1,14 +1,23 @@
 "use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 
-const listItem = [
-  { id: 1, label: "cabins", amount: 5 },
-  { id: 2, label: "guest", amount: 8 },
-  { id: 3, label: "crew", amount: 4 },
-];
+const Badge = ({
+  cabins,
+  guest,
+  crew,
+}: {
+  cabins: number;
+  guest: number;
+  crew: number;
+}) => {
+  const listItem = [
+    { id: 1, label: "cabins", amount: cabins },
+    { id: 2, label: "guest", amount: guest },
+    { id: 3, label: "crew", amount: crew },
+  ];
 
-const Badge = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -27,7 +36,7 @@ const Badge = () => {
             key={item.id}
           >
             <span className="quick_sand text-2xl md:text-[32px] font-bold text-fontColor">
-              {item.amount}
+              {item.amount} {/* Directly render the number */}
             </span>
             <h3 className="quick_sand font-bold text-base md:text-xl text-fontGray uppercase">
               {item.label}

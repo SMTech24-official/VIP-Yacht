@@ -25,17 +25,17 @@ const OfferDetails = () => {
   console.log(pricing);
   return (
     <div>
-      <Banner className="" title={blueprint.name} details="" />
+      <Banner className="" title={blueprint?.name} details="" />
       <div className="container md:px-0 px-2">
         <OfferDetailsVideo
-          images={blueprint.images}
-          pricing={pricing.weekPricingTo.displayPrice}
+          images={blueprint?.images}
+          pricing={pricing?.weekPricingTo?.displayPrice}
         />
         <h2 className="my-10 austin font-medium text-[32px] text-center">
           Details
         </h2>
 
-        <Details data={data?.data} />
+        <Details uri={params.id} data={data?.data} />
       </div>
     </div>
   );

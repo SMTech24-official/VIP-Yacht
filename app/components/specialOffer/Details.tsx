@@ -13,16 +13,18 @@ const onChange = (key: string) => {
 
 interface DetailsProps {
   data: any;
+  uri: string;
 }
 
-const Details: React.FC<DetailsProps> = ({ data }) => {
-  console.log(data?.interiorDesigner);
+const Details: React.FC<DetailsProps> = ({ data, uri }) => {
+  console.log(data);
   const items: TabsProps["items"] = [
     {
       key: "1",
       label: "overview",
       children: (
         <Overview
+          uri={uri}
           architect={data?.blueprint.architect}
           interiorDesigner={data?.blueprint.interiorDesigner}
           description={data?.description}
@@ -32,12 +34,12 @@ const Details: React.FC<DetailsProps> = ({ data }) => {
     {
       key: "2",
       label: "Features",
-      children: <Features blueprint={data?.data?.blueprint} />,
+      children: <Features uri={uri} blueprint={data?.blueprint} />,
     },
     {
       key: "3",
       label: "Amenities",
-      children: <Amenities />,
+      children: <Amenities uri={uri} blueprint={data?.blueprint} />,
     },
   ];
   return (
