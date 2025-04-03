@@ -5,28 +5,32 @@
 
 @font-face {
   font-family: "HurmeGeometricSans";
-  src: url("/fonts/HurmeGeometricSansFamily/HurmeGeometricSans1-Light.otf") format("opentype");
+  src: url("/fonts/HurmeGeometricSansFamily/HurmeGeometricSans1-Light.otf")
+    format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "HurmeGeometricSans";
-  src: url("/fonts/HurmeGeometricSansFamily/HurmeGeometricSans1-SemiBold.otf") format("opentype");
+  src: url("/fonts/HurmeGeometricSansFamily/HurmeGeometricSans1-SemiBold.otf")
+    format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "HurmeGeometricSans";
-  src: url("/fonts/HurmeGeometricSansFamily/HurmeGeometricSans1-Bold.otf") format("opentype");
+  src: url("/fonts/HurmeGeometricSansFamily/HurmeGeometricSans1-Bold.otf")
+    format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "HurmeGeometricSans";
-  src: url("/fonts/HurmeGeometricSansFamily/HurmeGeometricSans1-Black.otf") format("opentype");
+  src: url("/fonts/HurmeGeometricSansFamily/HurmeGeometricSans1-Black.otf")
+    format("opentype");
   font-weight: 900;
   font-style: normal;
 }
@@ -46,10 +50,12 @@
 }
 
 .hero {
-  background-color: linear-gradient(183deg,
-      rgba(0, 0, 0, 0) 46.13%,
-      rgba(0, 0, 0, 0.2) 62.71%,
-      rgba(0, 0, 0, 0.4) 84.27%);
+  background-color: linear-gradient(
+    183deg,
+    rgba(0, 0, 0, 0) 46.13%,
+    rgba(0, 0, 0, 0.2) 62.71%,
+    rgba(0, 0, 0, 0.4) 84.27%
+  );
 }
 
 :root {
@@ -153,7 +159,7 @@ body {
   text-decoration-color: #ff0000;
 }
 
-.ant-form-item-label>label {
+.ant-form-item-label > label {
   color: var(--primary) !important;
   /* Ensures the label color is applied */
 }
@@ -389,3 +395,139 @@ body {
   background-image: url(./assets/management_crew1.png);
 }
 
+:where(.css-dev-only-do-not-override-1v613y0).ant-steps
+  .ant-steps-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ant-form-item-required::before {
+  color: var(--primary) !important; /* Change to your desired color */
+}
+.ant-steps .ant-steps-item-process .ant-steps-item-icon {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+.ant-steps-item-content > .ant-steps-item-title {
+  color: #606060;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+/* Customize Radio Button */
+.custom-radio-group .custom-radio .ant-radio-inner {
+  width: 18px !important;
+  height: 18px !important;
+  border: 1px solid #2bbcc6 !important;
+  background-color: transparent !important;
+}
+
+/* When the radio is selected */
+.custom-radio-group .custom-radio .ant-radio-checked .ant-radio-inner {
+  border-color: #2bbcc6 !important;
+  background-color: transparent !important;
+}
+
+/* Change the inner dot color */
+.custom-radio-group .custom-radio .ant-radio-checked .ant-radio-inner:after {
+  background-color: var(--primary) !important; /* White inner dot */
+  width: 30px !important;
+  height: 30px !important;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+}
+
+/* Custom Hover Effect */
+.custom-radio-group .custom-radio:hover .ant-radio-inner {
+  border-color: var(--primary) !important;
+}
+
+/* Custom Text Styling */
+.custom-radio-group .custom-radio {
+  font-size: 16px !important;
+  color: #444 !important;
+  font-weight: 500;
+}
+
+/* Align Radio Buttons */
+.custom-radio-group .ant-space {
+  gap: 20px; /* Add spacing between Yes and No */
+}
+/* custom styles in your CSS file */
+.custom-select .ant-select-selector {
+  padding: 16px 20px !important;
+  border: var(--primary);
+}
+:where(.css-dev-only-do-not-override-1v613y0).ant-select-single {
+  font-size: 14px;
+  height: auto;
+}
+:where(.css-dev-only-do-not-override-1v613y0).ant-select-outlined:not(
+    .ant-select-disabled
+  ):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover
+  .ant-select-selector {
+  border-color: var(--primary);
+}
+.ant-select-focused:where(
+    .css-dev-only-do-not-override-1v613y0
+  ).ant-select-outlined:not(.ant-select-disabled):not(
+    .ant-select-customize-input
+  ):not(.ant-pagination-size-changer)
+  .ant-select-selector {
+  border-color: var(--primary);
+}
+/* step indicator */
+.custom-steps .ant-steps-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-steps .ant-steps-item-tail {
+  background: #e0e0e0 !important;
+  top: 2px !important;
+  z-index: 0;
+}
+
+.custom-steps .ant-steps-item-active .ant-steps-item-tail,
+.custom-steps .ant-steps-item-finish .ant-steps-item-tail {
+  background: #ececec !important;
+}
+
+.custom-steps .ant-steps-item-icon {
+  width: 10px !important;
+  height: 10px !important;
+  background: #e0e0e0 !important;
+  position: relative;
+  z-index: 10;
+}
+
+.custom-steps .ant-steps-item-title {
+  font-size: 20px !important;
+  color: #606060 !important;
+  font-weight: 700 !important;
+}
+
+.custom-steps .ant-steps-item-process .ant-steps-item-icon {
+  background: #e0e0e0 !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.custom-steps .ant-steps-item-process .ant-steps-item-icon .ant-steps-icon {
+  color: white !important;
+}
+.custom-steps .ant-steps-item-wait .ant-steps-item-icon {
+  background: #e0e0e0 !important;
+}
+.ant-steps .ant-steps-item-container {
+  display: block !important;
+}
+.custom-steps .ant-steps-item-process .ant-steps-item-tail::after,
+.custom-steps .ant-steps-item-finish .ant-steps-item-tail::after {
+  background-color: var(--primary) !important;
+}
+
+/* step indicator */
