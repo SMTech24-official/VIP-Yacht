@@ -34,7 +34,11 @@
     "lucide-react": "^0.477.0",
     "motion": "^12.4.10",
     "next": "15.2.0",
+<<<<<<< HEAD
+    "next-themes": "^0.4.6",
+=======
     "next-redux-wrapper": "^8.1.0",
+>>>>>>> ebbb599e73d0b059964ced30b40b148891b06cd1
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.54.2",

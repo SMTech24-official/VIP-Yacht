@@ -390,11 +390,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-.nav {
+/* .nav {
   background-image: url(./assets/management_crew1.png);
-}
-
+} */
 :where(.css-dev-only-do-not-override-1v613y0).ant-steps
   .ant-steps-item-container {
   display: flex;
@@ -423,6 +421,37 @@ body {
   background-color: transparent !important;
 }
 
+<<<<<<< HEAD
+:where(.css-dev-only-do-not-override-1v613y0).ant-steps
+  .ant-steps-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ant-form-item-required::before {
+  color: var(--primary) !important; /* Change to your desired color */
+}
+.ant-steps .ant-steps-item-process .ant-steps-item-icon {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+.ant-steps-item-content > .ant-steps-item-title {
+  color: #606060;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+/* Customize Radio Button */
+.custom-radio-group .custom-radio .ant-radio-inner {
+  width: 18px !important;
+  height: 18px !important;
+  border: 1px solid #2bbcc6 !important;
+  background-color: transparent !important;
+}
+
+=======
+>>>>>>> 1634a7434c83f7c87a41e30e5bfaee394a12d11b
 /* When the radio is selected */
 .custom-radio-group .custom-radio .ant-radio-checked .ant-radio-inner {
   border-color: #2bbcc6 !important;
