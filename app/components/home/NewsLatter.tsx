@@ -2,7 +2,7 @@ import React from "react";
 
 const NewsLatter = () => {
   return (
-    <div className="py-[120px]">
+    <div className="py-[120px] px-5">
       <div className="bg-[url(./assets/newsletter.png)] bg-no-repeat bg-center bg-cover container px-4 text-white md:px-10 rounded-lg">
         <div className="md:w-[440px] py-[92px]">
           <h2 className="austin text-5xl md:text-[64px] font-medium">

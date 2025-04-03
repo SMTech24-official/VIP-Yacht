@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import Image from "next/image";
 
 export default function App() {
   return (
@@ -24,7 +25,7 @@ export default function App() {
       >
         <SwiperSlide>
           <div className="w-[384px] h-[350px] rounded-lg">
-            <img
+            <Image
               src="./type1.png"
               alt="SEMPER VICTOR"
               width={384}
@@ -37,7 +38,7 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="w-[384px] h-[350px] rounded-lg">
-            <img
+            <Image
               src="./type1.png"
               alt="SEMPER VICTOR"
               width={384}

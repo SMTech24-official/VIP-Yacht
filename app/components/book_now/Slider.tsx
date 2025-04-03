@@ -11,8 +11,10 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import getHeroImageUrl from "@/utils/getImageHeroUrl";
 
-export default function App() {
+export default function App({ images }: { images: string[] }) {
   return (
     <>
       <motion.div
@@ -29,18 +31,20 @@ export default function App() {
           modules={[Navigation]}
           className="slider"
         >
-          <SwiperSlide>
-            <img src="/bookNow.png" className="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/blog1.png" className="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/bookNow.png" className="" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="/details2.png" className="" />
-          </SwiperSlide>
+          {images?.map((item, idx) => (
+            <SwiperSlide key={idx}>
+              <Image
+                width={400}
+                height={250}
+                alt="image"
+                src={`https://api.ankor.io${getHeroImageUrl(
+                  item || "",
+                  "960w"
+                )}`}
+                className=""
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
         <button className="custom-prev">
           <IoIosArrowBack />

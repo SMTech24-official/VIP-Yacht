@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Btn from "../common/Btn";
-import BannerDropdown from "../home/BannerDropdown";
+import BannerDropdown from "./BannerDropdown";
 
 const Banner = () => {
   return (

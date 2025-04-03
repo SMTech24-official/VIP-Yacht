@@ -1,13 +1,22 @@
+// src/components/Navbar.tsx
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import logo from "../assets/Logo.png";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
+import logo from "../assets/Logo.png";
+import { useGetAnkorAccessTokenQuery } from "@/redux/service/own/auth/authApi";
 
-const menuItem = [
+// Define the type for menu items
+interface MenuItem {
+  id: number;
+  name: string;
+  link: string;
+}
+
+const menuItem: MenuItem[] = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "Yacht Charter", link: "/yachtcharter" },
   { id: 3, name: "About Us", link: "/aboutus" },
@@ -18,16 +27,27 @@ const menuItem = [
 const Navbar = () => {
   const pathName = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const { data: accessTokenResponse } = useGetAnkorAccessTokenQuery();
+
+  // Extract the token from the API response
+  const accessToken = accessTokenResponse?.data || "";
 
   useEffect(() => {
+    // Store the access token in localStorage if it exists
+    if (accessToken) {
+      localStorage.setItem("ankor_token", accessToken);
+    }
+
+    // Close the mobile menu on larger screens
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
       }
     };
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [accessToken]);
 
   return (
     <header className="fixed top-0 left-0 w-full py-4 bg-gradient-to-r from-[#264463] to-[#021D45] drop-shadow-lg z-[1000]">
