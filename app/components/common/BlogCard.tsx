@@ -6,19 +6,12 @@ import { ImArrowRight2 } from "react-icons/im";
 import dayjs from "dayjs";
 
 interface BlogCardProps {
-<<<<<<< HEAD
   blog: {
     blogImg: StaticImageData | string;
     blogDate: string;
     blogTitle: string;
     id: Number;
   };
-=======
-  title: string;
-  createdAt: string;
-  image: string;
-  id: string;
->>>>>>> ebbb599e73d0b059964ced30b40b148891b06cd1
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({ title, createdAt, image, id }) => {
