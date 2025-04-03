@@ -2,6 +2,7 @@
 import React from "react";
 import { Button, Form, Input } from "antd";
 import { BsFillSendFill } from "react-icons/bs";
+import { toast, Toaster } from "sonner";
 
 const layout = {
   labelCol: { span: 24 }, // Make label take up full width
@@ -21,15 +22,20 @@ const validateMessages = {
   required: "${label} is required!",
   types: {
     email: "${label} is not a valid email!",
-    number: "${label} is not a valid number!",
+    // number: "${label} is not a valid number!",
   },
-  number: {
-    range: "${label} must be between ${min} and ${max}",
-  },
+  // number: {
+  //   range: "${label} must be between ${min} and ${max}",
+  // },
 };
 
 const onFinish = (values: FormValues) => {
   console.log(values);
+  if (values) {
+    toast.success("Thanks for your Message. It has been sent");
+  } else {
+    toast.error("Something went wrong");
+  }
 };
 
 const App: React.FC = () => (
@@ -59,6 +65,7 @@ const App: React.FC = () => (
       className="flex flex-col space-y-2"
     >
       <Input
+        type="email"
         className="!text-primary !border-primary placeholder:!text-primary font-medium !py-4 !px-5"
         placeholder="Enter your email address"
       />
@@ -90,6 +97,7 @@ const App: React.FC = () => (
         </span>
       </div>
     </Form.Item>
+    <Toaster />
   </Form>
 );
 
