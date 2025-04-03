@@ -421,7 +421,6 @@ body {
   background-color: transparent !important;
 }
 
-<<<<<<< HEAD
 :where(.css-dev-only-do-not-override-1v613y0).ant-steps
   .ant-steps-item-container {
   display: flex;
@@ -450,8 +449,6 @@ body {
   background-color: transparent !important;
 }
 
-=======
->>>>>>> 1634a7434c83f7c87a41e30e5bfaee394a12d11b
 /* When the radio is selected */
 .custom-radio-group .custom-radio .ant-radio-checked .ant-radio-inner {
   border-color: #2bbcc6 !important;
